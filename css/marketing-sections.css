@@ -1,0 +1,78 @@
+
+/* CSS CHO CÁC KHỐI MARKETING MỚI (TINH GỌN) */
+:root {
+    --m-blue: #0284c7;
+    --m-blue-light: #e0f2fe;
+    --m-red: #ef4444;
+    --m-red-light: #fef2f2;
+    --m-dark: #0f172a;
+    --m-text: #475569;
+    --m-bg-gray: #f8fafc;
+}
+
+.m-title { font-size: 36px; font-weight: 900; color: var(--m-dark); margin-bottom: 20px; line-height: 1.3; letter-spacing: -0.5px; }
+.m-title span { color: var(--m-blue); }
+.m-subtitle { font-size: 18px; color: var(--m-text); max-width: 600px; margin: 0 auto 40px auto; line-height: 1.6; }
+.text-center { text-align: center; }
+
+.m-btn { display: inline-block; padding: 12px 28px; font-size: 16px; font-weight: 700; border-radius: 8px; text-decoration: none; transition: all 0.3s; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; }
+.m-btn-red { background: var(--m-red); color: white; }
+.m-btn-red:hover { background: #dc2626; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(239, 68, 68, 0.2); color: white; }
+.m-btn-primary { background: var(--m-blue); color: white; border: 2px solid var(--m-blue); }
+.m-btn-primary:hover { background: #0369a1; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(2, 132, 199, 0.2); color: white; }
+.m-btn-outline { background: transparent; color: white; border: 2px solid white; }
+.m-btn-outline:hover { background: white; color: var(--m-blue); transform: translateY(-3px); }
+.m-btn-large { padding: 16px 36px; font-size: 18px; }
+
+/* 1. SẢN PHẨM HỌC VIÊN */
+.marketing-portfolio { padding: 80px 0; background: white; }
+.portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
+.port-item { position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; box-shadow: 0 10px 30px rgba(0,0,0,0.1); cursor: pointer; }
+.port-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+.port-item:hover img { transform: scale(1.05); }
+.port-overlay { position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); padding: 40px 20px 20px 20px; color: white; text-align: left; }
+.port-overlay h4 { font-size: 20px; margin-bottom: 5px; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+.port-overlay span { font-size: 14px; color: #cbd5e1; }
+
+/* 2. CẢM NHẬN */
+.marketing-testimonials { padding: 80px 0; background: var(--m-bg-gray); }
+.testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
+.testi-card { background: white; padding: 40px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); transition: transform 0.3s; position: relative; border-top: 4px solid var(--m-blue); }
+.testi-card:hover { transform: translateY(-10px); }
+.testi-stars { color: #fbbf24; font-size: 18px; margin-bottom: 20px; letter-spacing: 2px; }
+.testi-card p { font-size: 16px; color: var(--m-text); line-height: 1.8; font-style: italic; margin-bottom: 30px; }
+.testi-author { display: flex; align-items: center; gap: 15px; border-top: 1px solid #f1f5f9; padding-top: 20px; }
+.testi-avatar { width: 50px; height: 50px; border-radius: 50%; background: var(--m-blue-light); display: flex; align-items: center; justify-content: center; color: var(--m-blue); font-size: 20px; }
+.testi-info strong { display: block; color: var(--m-dark); font-size: 16px; margin-bottom: 3px; }
+.testi-info span { font-size: 14px; color: #64748b; }
+
+/* 3. VIDEO THƯ VIỆN */
+.marketing-video { padding: 80px 0; background: white; }
+.m-grid-video { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.m-video-content p { font-size: 18px; color: var(--m-text); line-height: 1.8; margin-bottom: 30px; }
+.video-placeholder { display: block; width: 100%; aspect-ratio: 16/9; background: url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1000') center/cover no-repeat; border-radius: 20px; position: relative; text-decoration: none; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transition: transform 0.3s; }
+.video-placeholder::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.4); transition: background 0.3s; }
+.video-placeholder:hover { transform: scale(1.02); }
+.video-placeholder:hover::before { background: rgba(0,0,0,0.2); }
+.play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 80px; color: white; transition: all 0.3s; text-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+.video-placeholder:hover .play-icon { color: var(--m-red); transform: translate(-50%, -50%) scale(1.1); }
+.video-placeholder span { position: absolute; bottom: 20px; left: 20px; color: white; font-weight: 600; font-size: 18px; z-index: 2; }
+
+/* 4. CTA */
+.marketing-cta { padding: 100px 0; background: linear-gradient(135deg, var(--m-blue) 0%, #3b82f6 100%); color: white; position: relative; overflow: hidden; }
+.marketing-cta::before { content: ''; position: absolute; inset: 0; background: url('https://www.transparenttextures.com/patterns/cubes.png'); opacity: 0.1; }
+.marketing-cta .container { position: relative; z-index: 2; }
+.marketing-cta h2 { font-size: 42px; font-weight: 900; margin-bottom: 20px; letter-spacing: -1px; }
+.marketing-cta p { font-size: 20px; margin-bottom: 40px; opacity: 0.9; }
+.marketing-cta strong { color: #fbbf24; }
+.cta-buttons { display: flex; justify-content: center; gap: 20px; }
+
+@media (max-width: 1024px) {
+    .m-grid-video { grid-template-columns: 1fr; gap: 40px; }
+    .portfolio-grid, .testimonial-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+    .portfolio-grid, .testimonial-grid { grid-template-columns: 1fr; }
+    .cta-buttons { flex-direction: column; }
+    .marketing-cta h2 { font-size: 32px; }
+}

@@ -1,0 +1,26 @@
+/* --- MÀU SẮC VÀ EMOJI --- */
+:root { --c1: #3b82f6; --c2: #93c5fd; --bg: #eff6ff; --text: #1e3a8a; }
+
+.floating-emoji { position: absolute; font-size: 30px; animation: floatUp 20s linear infinite; opacity: 0.5; }
+.floating-emoji:nth-child(1) { left: 75.02626643112656%; top: 3.5575231390119977%; animation-delay: 1.2843004073847202s; content: "⚙️"; }
+.floating-emoji:nth-child(2) { left: 86.84605863687248%; top: 74.43620652912861%; animation-delay: 2.765921310643989s; content: "⚙️"; }
+.floating-emoji:nth-child(3) { left: 48.51389044260114%; top: 85.42986285995646%; animation-delay: 2.952965613658866s; content: "🤖"; }
+.floating-emoji:nth-child(4) { left: 46.603827518853144%; top: 66.69115250786163%; animation-delay: 4.840027788265181s; content: "💻"; }
+.floating-emoji:nth-child(5) { left: 34.55746053658441%; top: 70.56948716215621%; animation-delay: 4.325673695775217s; content: "📈"; }
+.floating-emoji:nth-child(6) { left: 37.1374742902459%; top: 76.58365046903332%; animation-delay: 2.9459780775731863s; content: "⚙️"; }
+.floating-emoji:nth-child(7) { left: 9.277503964986632%; top: 30.83656619783128%; animation-delay: 2.5070666368778136s; content: "⚙️"; }
+.floating-emoji:nth-child(8) { left: 33.579339705958866%; top: 9.478207926056648%; animation-delay: 0.21914081310887124s; content: "💻"; }
+.floating-emoji:nth-child(9) { left: 50.700722487337046%; top: 48.987098528121244%; animation-delay: 1.780985983903844s; content: "📈"; }
+.floating-emoji:nth-child(10) { left: 87.40833010977255%; top: 11.276548165402456%; animation-delay: 1.671158425865903s; content: "📈"; }
+
+/* --- GIAO DIỆN RIÊNG BIỆT --- */
+.layout-python { background: linear-gradient(135deg, #eff6ff 0%, #bfdbfe 100%); }
+.layout-python .step-wrap { background: rgba(255,255,255,0.7); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.8); padding: 70px 50px; border-radius: 20px; margin: 50px 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); }
+.layout-python .hero-wrap { text-align: center; background: url('https://www.transparenttextures.com/patterns/circuit-board.png'), linear-gradient(135deg, #1e3a8a, var(--c1)); color: white; padding: 160px 20px 100px; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+.layout-python .grid-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 35px; }
+.layout-python .item-card { background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.4)); border-top: 2px solid white; border-left: 2px solid white; padding: 35px; border-radius: 15px; box-shadow: 5px 5px 20px rgba(59, 130, 246, 0.1); transition: 0.4s; }
+.layout-python .item-card:hover { transform: translateY(-10px) scale(1.02); }
+.layout-python .timeline { display: flex; overflow-x: auto; gap: 20px; padding-bottom: 20px; }
+.layout-python .timeline-item { min-width: 260px; background: white; padding: 25px; border-left: 6px solid var(--c1); border-radius: 0 10px 10px 0; }
+.layout-python .faq-item { border-left: 4px solid var(--c1); padding: 20px; background: white; margin-bottom: 15px; transition: 0.3s; }
+.layout-python .faq-item:hover { background: #e0f2fe; }

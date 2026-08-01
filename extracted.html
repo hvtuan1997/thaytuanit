@@ -1,0 +1,957 @@
+Created At: 2026-08-01T02:40:02Z
+Completed At: 2026-08-01T02:40:02Z
+File Path: `file:///c:/Users/admin/Downloads/mywebsite/mywebsite/index.html`
+Total Lines: 364
+Total Bytes: 21414
+Showing lines 1 to 364
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: <!DOCTYPE html>
+2: <html lang="vi">
+3: <head>
+4:     <meta charset="UTF-8">
+5:     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+6:     <title>Thầy Hoàng Văn Tuân - Giảng viên & Giáo viên Lập trình</title>
+7:     <link rel="preconnect" href="https://fonts.googleapis.com">
+8:     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+9:     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+10:     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+11:     <link rel="stylesheet" href="assets/css/style.css">
+12: </head>
+13: <body>
+14: 
+15:     <header class="main-header">
+16:         <div class="container nav-container">
+17:             <a href="#" class="logo">
+18:                 <i class="fa-solid Nav-icon fa-code"></i>
+19:                 <span>Thầy Hoàng Tuân</span>
+20:             </a>
+21:             
+22:             <nav class="nav-menu" id="navMenu">
+23:                 <a href="#" class="nav-link active">Trang chủ</a>
+24:                 
+25:                 <div class="dropdown">
+26:                     <a href="#courses-k12" class="nav-link">
+27:                         Khóa học K-12 <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+28:                     </a>
+29:                     <div class="dropdown-menu">
+30:                         <div class="dropdown-group">
+31:                             <h4>Khám phá (Cấp 1-2)</h4>
+32:                             <a href="courses/scratch/index.html" class="dropdown-item"><i class="fa-solid fa-cubes"></i> Lập trình Scratch</a>
+33:                             <a href="courses/gamemaker/index.html" class="dropdown-item"><i class="fa-solid fa-gamepad"></i> GameMaker Studio</a>
+34:                         </div>
+35:                         <div class="dropdown-group">
+36:                             <h4>Phát triển (Cấp 2-3)</h4>
+37:                             <a href="courses/python/index.html" class="dropdown-item"><i class="fa-brands fa-python"></i> Lập trình Python & C#</a>
+38:                             <a href="courses/web/index.html" class="dropdown-item"><i class="fa-solid fa-globe"></i> Thiết kế Website</a>
+39:                             <a href="courses/cs/index.html" class="dropdown-item"><i class="fa-solid fa-microchip"></i> Computer Science</a>
+40:                         </div>
+41:                     </div>
+42:                 </div>
+43: 
+44:                 <div class="dropdown">
+45:                     <a href="#competitions" class="nav-link">
+46:                         Lập trình thi đấu <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+47:                     </a>
+48:                     <div class="dropdown-menu dropdown-large">
+49:                         <a href="courses/tin-hoc-tre-a/index.html" class="dropdown-item item-two-lines">
+50:                             <i class="fa-solid fa-star text-amber"></i>
+51:                             <div class="item-text">
+52:                                 <strong>Tin học trẻ - Bảng A</strong>
+53:                                 <span class="dropdown-subtext">Tiểu học (Scratch / Python)</span>
+54:                             </div>
+55:                         </a>
+56:                         <a href="courses/tin-hoc-tre-b/index.html" class="dropdown-item item-two-lines">
+57:                             <i class="fa-solid fa-award text-blue"></i>
+58:                             <div class="item-text">
+59:                                 <strong>Tin học trẻ - Bảng B</strong>
+60:                                 <span class="dropdown-subtext">Trung học cơ sở (C++ / Python)</span>
+61:                             </div>
+62:                         </a>
+63:                         <a href="courses/hsg-tin/index.html" class="dropdown-item item-two-lines">
+64:                             <i class="fa-solid fa-medal text-purple"></i>
+65:                             <div class="item-text">
+66:                                 <strong>Học sinh giỏi Tin học</strong>
+67:                                 <span class="dropdown-subtext">Trung học cơ sở (C++ / Python)</span>
+68:                             </div>
+69:                         </a>
+70:                         <a href="courses/chuyen-tin-10/index.html" class="dropdown-item item-two-lines">
+71:                             <i class="fa-solid fa-graduation-cap text-indigo"></i>
+72:                             <div class="item-text">
+73:                                 <strong>Thi vào lớp 10 Chuyên Tin</strong>
+74:                                 <span class="dropdown-subtext">Trung học cơ sở (C++ / Python)</span>
+75:                             </div>
+76:                         </a>
+77:                         <a href="courses/hkico/index.html" class="dropdown-item item-two-lines">
+78:                             <i class="fa-solid fa-trophy text-red"></i>
+79:                             <div class="item-text">
+80:                                 <strong>Kỳ thi Quốc tế HKICO</strong>
+81:                                 <span class="dropdown-subtext">Tiểu học & THCS (Scratch / Python)</span>
+82:                             </div>
+83:                         </a>
+84:                     </div>
+85:                 </div>
+86: 
+87:                 <a href="courses/office/index.html" class="nav-link">Tin học văn phòng</a>
+88:                 <a href="#videos" class="nav-link">Thư viện video</a>
+89:                 <a href="#about" class="nav-link">Về thầy</a>
+90:                 <a href="#contact" class="nav-btn">Liên hệ ngay</a>
+91:             </nav>
+92: 
+93:             <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+94:                 <i class="fa-solid fa-bars"></i>
+95:             </button>
+96:         </div>
+97:     </header>
+98: 
+99:     <section class="hero-section">
+100:         <div class="container hero-container">
+101:             <div class="hero-content">
+102:                 <span class="badge">Hệ sinh thái học tập CNTT</span>
+103:                 <h1 class="hero-title">
+104:                     Khám phá thế giới Lập trình cùng <span class="highlight">Thầy Hoàng Văn Tuân</span>
+105:                 </h1>
+106:                 <p class="hero-subtitle">
+107:                     Hành trình kiến tạo tư duy công nghệ từ những khối lệnh kéo thả sinh động ở bậc phổ thông cho đến tư duy lập trình phần mềm chuyên sâu.
+108:                 </p>
+109:                 <div class="hero-actions">
+110:                     <a href="#courses-k12" class="btn btn-primary">
+111:                         <i class="fa-solid fa-rocket"></i> Bắt đầu học ngay
+112:                     </a>
+113:                     <a href="#competitions" class="btn btn-secondary">
+114:                         <i class="fa-solid fa-trophy"></i> Góc luyện thi Chuyên
+115:                     </a>
+116:                 </div>
+117:             </div>
+118:             <div class="hero-image-container">
+119:                 <div class="hero-illustration">
+120:                     <div class="tech-card card-1"><i class="fa-brands fa-python"></i> Python</div>
+121:                     <div class="tech-card card-2"><i class="fa-solid fa-gamepad"></i> GameMaker</div>
+122:                     <div class="tech-card card-3"><i class="fa-solid fa-cubes"></i> Scratch</div>
+123:                     <div class="circle-bg"></div>
+124:                     <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=600" alt="Học lập trình" class="hero-img">
+125:                 </div>
+126:             </div>
+127:         </div>
+128:     </section>
+129: 
+130:     <section id="courses-k12" class="courses-section">
+131:         <div class="container">
+132:             <div class="section-header">
+133:                 <span class="badge">Lộ trình cá nhân hóa</span>
+134:                 <h2 class="section-title">Khám phá Lộ trình Học tập</h2>
+135:                 <p class="section-subtitle">Từ những bước đi đầu tiên làm quen với tư duy máy tính đến chinh phục các giải thưởng tin học quốc gia và nền tảng kỹ sư phần mềm.</p>
+136:             </div>
+137: 
+138:             <div class="courses-grid">
+139:                 <div class="course-card theme-creative">
+140:                     <div class="card-icon">
+141:                         <i class="fa-solid fa-lightbulb"></i>
+142:                     </div>
+143:                     <h3 class="card-title">Khám phá & Sáng tạo</h3>
+144:                     <p class="card-target">Dành cho Học sinh Cấp 1 & 2</p>
+145:                     <p class="card-desc">Làm quen với tư duy logic thông qua lập trình kéo thả trực quan và tự tay sáng tạo ra những trò chơi đầu đời.</p>
+146:                     <ul class="course-list">
+147:                         <li><i class="fa-solid fa-cubes"></i> Lập trình Scratch</li>
+148:                         <li><i class="fa-solid fa-gamepad"></i> GameMaker Studio</li>
+149:                     </ul>
+150:                     <a href="#" class="card-btn">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+151:                 </div>
+152: 
+153:                 <div class="course-card theme-dev">
+154:                     <div class="card-icon">
+155:                         <i class="fa-solid fa-laptop-code"></i>
+156:                     </div>
+157:                     <h3 class="card-title">Ứng dụng & Phát triển</h3>
+158:                     <p class="card-target">Dành cho Học sinh Cấp 2, 3</p>
+159:                     <p class="card-desc">Chuyển tiếp sang viết code thực thụ. Xây dựng các ứng dụng phần mềm, giao diện website và khoa học máy tính cơ bản.</p>
+160:                     <ul class="course-list">
+161:                         <li><i class="fa-brands fa-python"></i> Lập trình Python & C#</li>
+162:                         <li><i class="fa-solid fa-globe"></i> Thiết kế Website (HTML/CSS)</li>
+163:                         <li><i class="fa-solid fa-microchip"></i> Computer Science</li>
+164:                     </ul>
+165:                     <a href="#" class="card-btn">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+166:                 </div>
+167: 
+168:                 <div class="course-card theme-pro">
+169:                     <div class="card-icon">
+170:                         <i class="fa-solid fa-trophy"></i>
+171:                     </div>
+172:                     <h3 class="card-title">Chinh phục Thử thách</h3>
+173:                     <p class="card-target">Học sinh năng khiếu & Chuyên Tin</p>
+174:                     <p class="card-desc">Rèn luyện tư duy thuật toán chuyên sâu, cấu trúc dữ liệu để sẵn sàng cho các kỳ thi học sinh giỏi và lập trình thi đấu.</p>
+175:                     <ul class="course-list">
+176:                         <li><i class="fa-solid fa-code"></i> Lập trình thi đấu (C++)</li>
+177:                         <li><i class="fa-solid fa-medal"></i> Ôn thi 10 Chuyên Tin</li>
+178:                         <li><i class="fa-solid fa-star"></i> Luyện thi Tin học trẻ</li>
+179:                     </ul>
+180:                     <a href="#" class="card-btn">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+181:                 </div>
+182:             </div>
+183:         </div>
+184:     </section>
+185: 
+186:     <section id="videos" class="video-section">
+187:         <div class="container">
+188:             <div class="section-header">
+189:                 <span class="badge" style="background-color: #fee2e2; color: #ef4444;">Học liệu Trực quan</span>
+190:                 <h2 class="section-title">Thư viện Video Bài giảng</h2>
+191:                 <p class="section-subtitle">Ôn tập kiến thức mọi lúc, mọi nơi với các video hướng dẫn chi tiết, trực quan do chính thầy biên soạn trên kênh YouTube.</p>
+192:             </div>
+193: 
+194:             <div class="video-grid">
+195:                 <a href="LINK_YOUTUBE_CUA_BAN" target="_blank" class="video-card">
+196:                     <div class="video-thumbnail">
+197:                         <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=800" alt="Video Lập trình">
+198:                         <div class="play-overlay">
+199:                             <i class="fa-solid fa-play"></i>
+200:                         </div>
+201:                         <span class="video-duration">15:24</span>
+202:                     </div>
+203:                     <div class="video-info">
+204:                         <span class="video-category">Lập trình Game</span>
+205:                         <h3 class="video-title">Hướng dẫn làm game Flappy Bird bằng Scratch chi tiết từ A-Z</h3>
+206:                     </div>
+207:                 </a>
+208: 
+209:                 <a href="LINK_YOUTUBE_CUA_BAN" target="_blank" class="video-card">
+210:                     <div class="video-thumbnail">
+211:                         <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bfce8?auto=format&fit=crop&q=80&w=800" alt="Video Python">
+212:                         <div class="play-overlay">
+213:                             <i class="fa-solid fa-play"></i>
+214:                         </div>
+215:                         <span class="video-duration">22:10</span>
+216:                     </div>
+217:                     <div class="video-info">
+218:                         <span class="video-category">Python Cơ bản</span>
+219:                         <h3 class="video-title">Bài 1: Làm quen với Python và Cấu trúc rẽ nhánh (If/Else)</h3>
+220:                     </div>
+221:                 </a>
+222: 
+223:                 <a href="LINK_YOUTUBE_CUA_BAN" target="_blank" class="video-card">
+224:                     <div class="video-thumbnail">
+225:                         <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=800" alt="Video C++">
+226:                         <div class="play-overlay">
+227:                             <i class="fa-solid fa-play"></i>
+228:                         </div>
+229:                         <span class="video-duration">45:00</span>
+230:                     </div>
+231:                     <div class="video-info">
+232:                         <span class="video-category">Giải Đề Chuyên</span>
+233:                         <h3 class="video-title">Chữa đề thi Học sinh giỏi Tin học - Mảng 1 chiều & Thuật toán tối ưu</h3>
+234:                     </div>
+235:                 </a>
+236:             </div>
+237: 
+238:             <div class="text-center" style="margin-top: 50px; text-align: center;">
+239:                 <a href="LINK_KENH_YOUTUBE_CUA_BAN" target="_blank" class="btn btn-secondary" style="border-color: #ef4444; color: #ef4444;">
+240:                     <i class="fa-brands fa-youtube"></i> Xem toàn bộ trên YouTube
+241:                 </a>
+242:             </div>
+243:         </div>
+244:     </section>
+245: 
+246:     <section id="about" class="about-section">
+247:         <div class="container about-container">
+248:             <div class="about-image-side">
+249:                 <div class="profile-frame">
+250:                     <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600" alt="Thầy Hoàng Văn Tuân" class="profile-img">
+251:                     
+252:                     <div class="info-badge badge-top">
+253:                         <i class="fa-solid fa-graduation-cap"></i>
+254:                         <div>
+255:                             <h4>Giảng viên CNTT</h4>
+256:                             <p>Bậc Đại học</p>
+257:                         </div>
+258:                     </div>
+259:                     
+260:                     <div class="info-badge badge-bottom">
+261:                         <i class="fa-solid fa-child"></i>
+262:                         <div>
+263:                             <h4>Chuyên gia Đào tạo</h4>
+264:                             <p>K-12 & Lập trình trẻ</p>
+265:                         </div>
+266:                     </div>
+267:                 </div>
+268:             </div>
+269: 
+270:             <div class="about-content-side">
+271:                 <span class="badge" style="background-color: #e0f2fe; color: #0369a1;">Người đồng hành</span>
+272:                 <h2 class="about-title">Về Thầy Hoàng Văn Tuân</h2>
+273:                 <p class="about-lead">
+274:                     Với đặc quyền được đồng hành cùng sinh viên chuyên ngành phần mềm ở bậc Đại học và các em học sinh từ lớp 1 đến lớp 12, tôi có một cái nhìn toàn diện về lộ trình phát triển năng lực số. Tôi hiểu rõ học sinh cần tích lũy những gì ở từng lứa tuổi để không bị bỡ ngỡ và có thể tiến xa trong kỷ nguyên công nghệ.
+275:                 </p>
+276:                 
+277:                 <div class="philosophy-box">
+278:                     <h3 class="philosophy-title"><i class="fa-solid fa-heart"></i> Triết lý Giáo dục</h3>
+279:                     <div class="philosophy-items">
+280:                         
+281:                         <div class="philosophy-item">
+282:                             <div class="p-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+283:                             <div class="p-text">
+284:                                 <h4>Học qua dự án thực tế (Project-based Learning)</h4>
+285:                                 <p>Không nhồi nhét lý thuyết suông một cách khô khan. Lớp học của thầy luôn hướng tới việc giúp các em tự tay hoàn thành các sản phẩm thực tế: một trò chơi Scratch/GameMaker sinh động hay một trang web cá nhân độc đáo.</p>
+286:                             </div>
+287:                         </div>
+288:                         
+289:                         <div class="philosophy-item">
+290:                             <div class="p-icon"><i class="fa-solid fa-brain"></i></div>
+291:                             <div class="p-text">
+292:                                 <h4>Kiến tạo tư duy bền vững</h4>
+293:                                 <p>Cú pháp hay công cụ lập trình có thể thay đổi theo thời gian, nhưng tư duy logic, kỹ năng giải quyết vấn đề (Problem-solving) và cấu trúc giải thuật được rèn luyện từ bé sẽ là bệ phóng tư duy đi theo các em suốt đời.</p>
+294:                             </div>
+295:                         </div>
+296: 
+297:                     </div>
+298:                 </div>
+299:             </div>
+300:         </div>
+301:     </section>
+302: 
+303:     <footer id="contact" class="site-footer">
+304:         <div class="container footer-container">
+305:             <div class="footer-column brand-column">
+306:                 <a href="#" class="footer-logo">
+307:                     <i class="fa-solid fa-code"></i>
+308:                     <span>Thầy Hoàng Tuân</span>
+309:                 </a>
+310:                 <p class="footer-brand-desc">
+311:                     Hệ sinh thái học tập công nghệ thông tin dành cho học sinh phổ thông và sinh viên chuyên ngành phần mềm. Kiến tạo tư duy vững chắc cho tương lai số.
+312:                 </p>
+313:                 <div class="social-links">
+314:                     <a href="#" target="_blank" aria-label="Facebook Thầy Hoàng Tuân"><i class="fa-brands fa-facebook-f"></i></a>
+315:                     <a href="#" target="_blank" aria-label="Kênh YouTube học tập"><i class="fa-brands fa-youtube"></i></a>
+316:                     <a href="https://zalo.me/SỐ_DI_ĐỘNG_CỦA_BẠN" target="_blank" aria-label="Liên hệ Zalo"><i class="fa-solid fa-phone"></i></a>
+317:                 </div>
+318:             </div>
+319: 
+320:             <div class="footer-column links-column">
+321:                 <h3 class="footer-heading">Khóa Học & Học Liệu</h3>
+322:                 <ul class="footer-links-list">
+323:                     <li><a href="#courses-k12">Lập trình Scratch (Cấp 1-2)</a></li>
+324:                     <li><a href="#courses-k12">Lập trình GameMaker (Cấp 1-2)</a></li>
+325:                     <li><a href="#courses-k12">Phát triển Website & Python</a></li>
+326:                     <li><a href="#competitions">Lập trình thi đấu & Chuyên Tin</a></li>
+327:                     <li><a href="#videos">Tin học văn phòng (MOS / IC3)</a></li>
+328:                 </ul>
+329:             </div>
+330: 
+331:             <div class="footer-column contact-column">
+332:                 <h3 class="footer-heading">Thông Tin Liên Hệ</h3>
+333:                 <ul class="contact-info-list">
+334:                     <li>
+335:                         <i class="fa-solid fa-envelope"></i>
+336:                         <span>Email: info@hoangvantuan.edu.vn</span>
+337:                     </li>
+338:                     <li>
+339:                         <i class="fa-solid fa-phone-volume"></i>
+340:                         <span>Hotline/Zalo: 09x.xxx.xxxx</span>
+341:                     </li>
+342:                     <li>
+343:                         <i class="fa-solid fa-location-dot"></i>
+344:                         <span>Hà Nội, Việt Nam</span>
+345:                     </li>
+346:                 </ul>
+347:             </div>
+348:         </div>
+349: 
+350:         <div class="footer-bottom">
+351:             <div class="container footer-bottom-container">
+352:                 <p class="copyright">© 2026 Hoàng Văn Tuân. All rights reserved.</p>
+353:                 <p class="designed-by">Tự hào lan tỏa <i class="fa-solid fa-heart" style="color: #ef4444;"></i> lập trình cho mọi người</p>
+354:             </div>
+355:         </div>
+356:     </footer>
+357: 
+358:     <button id="scrollToTopBtn" class="scroll-to-top-btn" aria-label="Cuộn lên đầu trang">
+359:         <i class="fa-solid fa-arrow-up"></i>
+360:     </button>
+361: 
+362:     <script src="assets/js/main.js"></script>
+363: </body>
+364: </html>
+The above content shows the entire, complete file contents of the requested file.
+Created At: 2026-08-01T02:40:13Z
+Completed At: 2026-08-01T02:40:13Z
+File Path: `file:///c:/Users/admin/Downloads/mywebsite/mywebsite/update_html.js`
+Total Lines: 175
+Total Bytes: 9690
+Showing lines 1 to 175
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: const fs = require('fs');
+2: const path = require('path');
+3: 
+4: const courses = [
+5:     'scratch', 'gamemaker', 'python', 'web', 'cs',
+6:     'tin-hoc-tre-a', 'tin-hoc-tre-b', 'hsg-tin', 'chuyen-tin-10', 'hkico'
+7: ];
+8: 
+9: const header = `    <header class="main-header">
+10:         <div class="container nav-container">
+11:             <a href="../../index.html" class="logo">
+12:                 <i class="fa-solid Nav-icon fa-code"></i>
+13:                 <span>Thầy Hoàng Tuân</span>
+14:             </a>
+15:             
+16:             <nav class="nav-menu" id="navMenu">
+17:                 <a href="../../index.html" class="nav-link">Trang chủ</a>
+18:                 
+19:                 <div class="dropdown">
+20:                     <a href="../../index.html#courses-k12" class="nav-link active">
+21:                         Khóa học K-12 <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+22:                     </a>
+23:                     <div class="dropdown-menu">
+24:                         <div class="dropdown-group">
+25:                             <h4>Khám phá (Cấp 1-2)</h4>
+26:                             <a href="../../courses/scratch/index.html" class="dropdown-item"><i class="fa-solid fa-cubes"></i> Lập trình Scratch</a>
+27:                             <a href="../../courses/gamemaker/index.html" class="dropdown-item"><i class="fa-solid fa-gamepad"></i> GameMaker Studio</a>
+28:                         </div>
+29:                         <div class="dropdown-group">
+30:                             <h4>Phát triển (Cấp 2-3)</h4>
+31:                             <a href="../../courses/python/index.html" class="dropdown-item"><i class="fa-brands fa-python"></i> Lập trình Python & C#</a>
+32:                             <a href="../../courses/web/index.html" class="dropdown-item"><i class="fa-solid fa-globe"></i> Thiết kế Website</a>
+33:                             <a href="../../courses/cs/index.html" class="dropdown-item"><i class="fa-solid fa-microchip"></i> Computer Science</a>
+34:                         </div>
+35:                     </div>
+36:                 </div>
+37: 
+38:                 <div class="dropdown">
+39:                     <a href="../../index.html#competitions" class="nav-link">
+40:                         Lập trình thi đấu <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+41:                     </a>
+42:                     <div class="dropdown-menu dropdown-large">
+43:                         <a href="../../courses/tin-hoc-tre-a/index.html" class="dropdown-item item-two-lines">
+44:                             <i class="fa-solid fa-star text-amber"></i>
+45:                             <div class="item-text">
+46:                                 <strong>Tin học trẻ - Bảng A</strong>
+47:                                 <span class="dropdown-subtext">Tiểu học (Scratch / Python)</span>
+48:                             </div>
+49:                         </a>
+50:                         <a href="../../courses/tin-hoc-tre-b/index.html" class="dropdown-item item-two-lines">
+51:                             <i class="fa-solid fa-award text-blue"></i>
+52:                             <div class="item-text">
+53:                                 <strong>Tin học trẻ - Bảng B</strong>
+54:                                 <span class="dropdown-subtext">Trung học cơ sở (C++ / Python)</span>
+55:                             </div>
+56:                         </a>
+57:                         <a href="../../courses/hsg-tin/index.html" class="dropdown-item item-two-lines">
+58:                             <i class="fa-solid fa-medal text-purple"></i>
+59:                             <div class="item-text">
+60:                                 <strong>Học sinh giỏi Tin học</strong>
+61:                                 <span class="dropdown-subtext">Trung học cơ sở (C++ / Python)</span>
+62:                             </div>
+63:                         </a>
+64:                         <a href="../../courses/chuyen-tin-10/index.html" class="dropdown-item item-two-lines">
+65:                             <i class="fa-solid fa-graduation-cap text-indigo"></i>
+66:                             <div class="item-text">
+67:                                 <strong>Thi vào lớp 10 Chuyên Tin</strong>
+68:                                 <span class="dropdown-subtext">Trung học cơ sở (C++ / Python)</span>
+69:                             </div>
+70:                         </a>
+71:                         <a href="../../courses/hkico/index.html" class="dropdown-item item-two-lines">
+72:                             <i class="fa-solid fa-trophy text-red"></i>
+73:                             <div class="item-text">
+74:                                 <strong>Kỳ thi Quốc tế HKICO</strong>
+75:                                 <span class="dropdown-subtext">Tiểu học & THCS (Scratch / Python)</span>
+76:                             </div>
+77:                         </a>
+78:                     </div>
+79:                 </div>
+80: 
+81:                 <a href="../../index.html#office" class="nav-link">Tin học văn phòng</a>
+82:                 <a href="../../index.html#videos" class="nav-link">Thư viện video</a>
+83:                 <a href="../../index.html#about" class="nav-link">Về thầy</a>
+84:                 <a href="../../index.html#contact" class="nav-btn">Liên hệ ngay</a>
+85:             </nav>
+86: 
+87:             <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+88:                 <i class="fa-solid fa-bars"></i>
+89:             </button>
+90:         </div>
+91:     </header>`;
+92: 
+93: const footer = `    <footer id="contact" class="site-footer">
+94:         <div class="container footer-container">
+95:             <div class="footer-column brand-column">
+96:                 <a href="../../index.html" class="footer-logo">
+97:                     <i class="fa-solid fa-code"></i>
+98:                     <span>Thầy Hoàng Tuân</span>
+99:                 </a>
+100:                 <p class="footer-brand-desc">
+101:                     Hệ sinh thái học tập công nghệ thông tin dành cho học sinh phổ thông và sinh viên chuyên ngành phần mềm. Kiến tạo tư duy vững chắc cho tương lai số.
+102:                 </p>
+103:                 <div class="social-links">
+104:                     <a href="#" target="_blank" aria-label="Facebook Thầy Hoàng Tuân"><i class="fa-brands fa-facebook-f"></i></a>
+105:                     <a href="#" target="_blank" aria-label="Kênh YouTube học tập"><i class="fa-brands fa-youtube"></i></a>
+106:                     <a href="https://zalo.me/SỐ_DI_ĐỘNG_CỦA_BẠN" target="_blank" aria-label="Liên hệ Zalo"><i class="fa-solid fa-phone"></i></a>
+107:                 </div>
+108:             </div>
+109: 
+110:             <div class="footer-column links-column">
+111:                 <h3 class="footer-heading">Khóa Học & Học Liệu</h3>
+112:                 <ul class="footer-links-list">
+113:                     <li><a href="../../index.html#courses-k12">Lập trình Scratch (Cấp 1-2)</a></li>
+114:                     <li><a href="../../index.html#courses-k12">Lập trình GameMaker (Cấp 1-2)</a></li>
+115:                     <li><a href="../../index.html#courses-k12">Phát triển Website & Python</a></li>
+116:                     <li><a href="../../index.html#competitions">Lập trình thi đấu & Chuyên Tin</a></li>
+117:                     <li><a href="../../index.html#videos">Tin học văn phòng (MOS / IC3)</a></li>
+118:                 </ul>
+119:             </div>
+120: 
+121:             <div class="footer-column contact-column">
+122:                 <h3 class="footer-heading">Thông Tin Liên Hệ</h3>
+123:                 <ul class="contact-info-list">
+124:                     <li>
+125:                         <i class="fa-solid fa-envelope"></i>
+126:                         <span>Email: info@hoangvantuan.edu.vn</span>
+127:                     </li>
+128:                     <li>
+129:                         <i class="fa-solid fa-phone-volume"></i>
+130:                         <span>Hotline/Zalo: 09x.xxx.xxxx</span>
+131:                     </li>
+132:                     <li>
+133:                         <i class="fa-solid fa-location-dot"></i>
+134:                         <span>Hà Nội, Việt Nam</span>
+135:                     </li>
+136:                 </ul>
+137:             </div>
+138:         </div>
+139: 
+140:         <div class="footer-bottom">
+141:             <div class="container footer-bottom-container">
+142:                 <p class="copyright">© 2026 Hoàng Văn Tuân. All rights reserved.</p>
+143:                 <p class="designed-by">Tự hào lan tỏa <i class="fa-solid fa-heart" style="color: #ef4444;"></i> lập trình cho mọi người</p>
+144:             </div>
+145:         </div>
+146:     </footer>
+147: 
+148:     <button id="scrollToTopBtn" class="scroll-to-top-btn" aria-label="Cuộn lên đầu trang">
+149:         <i class="fa-solid fa-arrow-up"></i>
+150:     </button>
+151:     <script src="../../assets/js/main.js"></script>`;
+152: 
+153: courses.forEach(course => {
+154:     const filePath = path.join(__dirname, 'courses', course, 'index.html');
+155:     let content = fs.readFileSync(filePath, 'utf8');
+156:     
+157:     // Add CSS link
+158:     if(!content.includes('href="../../assets/css/courses/' + course + '.css"')){
+159:         content = content.replace(
+160:             '<link rel="stylesheet" href="../../assets/css/course-detail.css">',
+161:             '<link rel="stylesheet" href="../../assets/css/course-detail.css">\n    <link rel="stylesheet" href="../../assets/css/courses/' + course + '.css">'
+162:         );
+163:     }
+164:     
+165:     // Replace Header
+166:     content = content.replace(/<header class="main-header">[\s\S]*?<\/header>/, header);
+167:     
+168:     // Replace Footer
+169:     content = content.replace(/<footer class="site-footer" style="margin-top: 50px;">[\s\S]*?<\/footer>/, footer);
+170:     
+171:     fs.writeFileSync(filePath, content, 'utf8');
+172: });
+173: 
+174: console.log("Updated all HTML files successfully.");
+175: 
+The above content shows the entire, complete file contents of the requested file.
+Created At: 2026-08-01T03:27:48Z
+Completed At: 2026-08-01T03:27:48Z
+File Path: `file:///c:/Users/admin/Downloads/mywebsite/mywebsite/index.html`
+Total Lines: 364
+Total Bytes: 21247
+Showing lines 1 to 250
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: <!DOCTYPE html>
+2: <html lang="vi">
+3: <head>
+4:     <meta charset="UTF-8">
+5:     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+6:     <title>Thầy Hoàng Văn Tuân - Giảng viên & Giáo viên Lập trình</title>
+7:     <link rel="preconnect" href="https://fonts.googleapis.com">
+8:     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+9:     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+10:     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+11:     <link rel="stylesheet" href="css/style.css">
+12: </head>
+13: <body>
+14: 
+15:     <header class="main-header">
+16:         <div class="container nav-container">
+17:             <a href="#" class="logo">
+18:                 <i class="fa-solid Nav-icon fa-code"></i>
+19:                 <span>Thầy Hoàng Tuân</span>
+20:             </a>
+21:             
+22:             <nav class="nav-menu" id="navMenu">
+23:                 <a href="#" class="nav-link active">Trang chủ</a>
+24:                 
+25:                 <div class="dropdown">
+26:                     <a href="#courses-k12" class="nav-link">
+27:                         Khóa học K-12 <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+28:                     </a>
+29:                     <div class="dropdown-menu">
+30:                         <div class="dropdown-group">
+31:                             <h4>Khám phá (Cấp 1-2)</h4>
+32:                             <a href="scratch.html" class="dropdown-item"><i class="fa-solid fa-cubes"></i> Lập trình Scratch</a>
+33:                             <a href="game-maker.html" class="dropdown-item"><i class="fa-solid fa-gamepad"></i> GameMaker Studio</a>
+34:                         </div>
+35:                         <div class="dropdown-group">
+36:                             <h4>Phát triển (Cấp 2-3)</h4>
+37:                             <a href="python.html" class="dropdown-item"><i class="fa-brands fa-python"></i> Lập trình Python & C#</a>
+38:                             <a href="web.html" class="dropdown-item"><i class="fa-solid fa-globe"></i> Thiết kế Website</a>
+39:                             <a href="cs.html" class="dropdown-item"><i class="fa-solid fa-microchip"></i> Computer Science</a>
+40:                         </div>
+41:                     </div>
+42:                 </div>
+43: 
+44:                 <div class="dropdown">
+45:                     <a href="#competitions" class="nav-link">
+46:                         Lập trình thi đấu <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+47:                     </a>
+48:                     <div class="dropdown-menu dropdown-large">
+49:                         <a href="tin-hoc-tre-a.html" class="dropdown-item item-two-lines">
+50:                             <i class="fa-solid fa-star text-amber"></i>
+51:                             <div class="item-text">
+52:                                 <strong>Tin học trẻ - Bảng A</strong>
+53:                                 <span class="dropdown-subtext">Tiểu học (Scratch / Python)</span>
+54:                             </div>
+55:                         </a>
+56:                         <a href="tin-hoc-tre-b.html" class="dropdown-item item-two-lines">
+57:                             <i class="fa-solid fa-award text-blue"></i>
+58:                             <div class="item-text">
+59:                                 <strong>Tin học trẻ - Bảng B</strong>
+60:                                 <span class="dropdown-subtext">Trung học cơ sở (C++ / Python)</span>
+61:                             </div>
+62:                         </a>
+63:                         <a href="hsg-tin.html" class="dropdown-item item-two-lines">
+64:                             <i class="fa-solid fa-medal text-purple"></i>
+65:                             <div class="item-text">
+66:                                 <strong>Học sinh giỏi Tin học</strong>
+67:                                 <span class="dropdown-subtext">Trung học cơ sở (C++ / Python)</span>
+68:                             </div>
+69:                         </a>
+70:                         <a href="chuyen-tin-10.html" class="dropdown-item item-two-lines">
+71:                             <i class="fa-solid fa-graduation-cap text-indigo"></i>
+72:                             <div class="item-text">
+73:                                 <strong>Thi vào lớp 10 Chuyên Tin</strong>
+74:                                 <span class="dropdown-subtext">Trung học cơ sở (C++ / Python)</span>
+75:                             </div>
+76:                         </a>
+77:                         <a href="hkico.html" class="dropdown-item item-two-lines">
+78:                             <i class="fa-solid fa-trophy text-red"></i>
+79:                             <div class="item-text">
+80:                                 <strong>Kỳ thi Quốc tế HKICO</strong>
+81:                                 <span class="dropdown-subtext">Tiểu học & THCS (Scratch / Python)</span>
+82:                             </div>
+83:                         </a>
+84:                     </div>
+85:                 </div>
+86: 
+87:                 <a href="office.html" class="nav-link">Tin học văn phòng</a>
+88:                 <a href="#videos" class="nav-link">Thư viện video</a>
+89:                 <a href="#about" class="nav-link">Về thầy</a>
+90:                 <a href="#contact" class="nav-btn">Liên hệ ngay</a>
+91:             </nav>
+92: 
+93:             <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+94:                 <i class="fa-solid fa-bars"></i>
+95:             </button>
+96:         </div>
+97:     </header>
+98: 
+99:     <section class="hero-section">
+100:         <div class="container hero-container">
+101:             <div class="hero-content">
+102:                 <span class="badge">Hệ sinh thái học tập CNTT</span>
+103:                 <h1 class="hero-title">
+104:                     Khám phá thế giới Lập trình cùng <span class="highlight">Thầy Hoàng Văn Tuân</span>
+105:                 </h1>
+106:                 <p class="hero-subtitle">
+107:                     Hành trình kiến tạo tư duy công nghệ từ những khối lệnh kéo thả sinh động ở bậc phổ thông cho đến tư duy lập trình phần mềm chuyên sâu.
+108:                 </p>
+109:                 <div class="hero-actions">
+110:                     <a href="#courses-k12" class="btn btn-primary">
+111:                         <i class="fa-solid fa-rocket"></i> Bắt đầu học ngay
+112:                     </a>
+113:                     <a href="#competitions" class="btn btn-secondary">
+114:                         <i class="fa-solid fa-trophy"></i> Góc luyện thi Chuyên
+115:                     </a>
+116:                 </div>
+117:             </div>
+118:             <div class="hero-image-container">
+119:                 <div class="hero-illustration">
+120:                     <div class="tech-card card-1"><i class="fa-brands fa-python"></i> Python</div>
+121:                     <div class="tech-card card-2"><i class="fa-solid fa-gamepad"></i> GameMaker</div>
+122:                     <div class="tech-card card-3"><i class="fa-solid fa-cubes"></i> Scratch</div>
+123:                     <div class="circle-bg"></div>
+124:                     <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=600" alt="Học lập trình" class="hero-img">
+125:                 </div>
+126:             </div>
+127:         </div>
+128:     </section>
+129: 
+130:     <section id="courses-k12" class="courses-section">
+131:         <div class="container">
+132:             <div class="section-header">
+133:                 <span class="badge">Lộ trình cá nhân hóa</span>
+134:                 <h2 class="section-title">Khám phá Lộ trình Học tập</h2>
+135:                 <p class="section-subtitle">Từ những bước đi đầu tiên làm quen với tư duy máy tính đến chinh phục các giải thưởng tin học quốc gia và nền tảng kỹ sư phần mềm.</p>
+136:             </div>
+137: 
+138:             <div class="courses-grid">
+139:                 <div class="course-card theme-creative">
+140:                     <div class="card-icon">
+141:                         <i class="fa-solid fa-lightbulb"></i>
+142:                     </div>
+143:                     <h3 class="card-title">Khám phá & Sáng tạo</h3>
+144:                     <p class="card-target">Dành cho Học sinh Cấp 1 & 2</p>
+145:                     <p class="card-desc">Làm quen với tư duy logic thông qua lập trình kéo thả trực quan và tự tay sáng tạo ra những trò chơi đầu đời.</p>
+146:                     <ul class="course-list">
+147:                         <li><i class="fa-solid fa-cubes"></i> Lập trình Scratch</li>
+148:                         <li><i class="fa-solid fa-gamepad"></i> GameMaker Studio</li>
+149:                     </ul>
+150:                     <a href="#" class="card-btn">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+151:                 </div>
+152: 
+153:                 <div class="course-card theme-dev">
+154:                     <div class="card-icon">
+155:                         <i class="fa-solid fa-laptop-code"></i>
+156:                     </div>
+157:                     <h3 class="card-title">Ứng dụng & Phát triển</h3>
+158:                     <p class="card-target">Dành cho Học sinh Cấp 2, 3</p>
+159:                     <p class="card-desc">Chuyển tiếp sang viết code thực thụ. Xây dựng các ứng dụng phần mềm, giao diện website và khoa học máy tính cơ bản.</p>
+160:                     <ul class="course-list">
+161:                         <li><i class="fa-brands fa-python"></i> Lập trình Python & C#</li>
+162:                         <li><i class="fa-solid fa-globe"></i> Thiết kế Website (HTML/CSS)</li>
+163:                         <li><i class="fa-solid fa-microchip"></i> Computer Science</li>
+164:                     </ul>
+165:                     <a href="#" class="card-btn">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+166:                 </div>
+167: 
+168:                 <div class="course-card theme-pro">
+169:                     <div class="card-icon">
+170:                         <i class="fa-solid fa-trophy"></i>
+171:                     </div>
+172:                     <h3 class="card-title">Chinh phục Thử thách</h3>
+173:                     <p class="card-target">Học sinh năng khiếu & Chuyên Tin</p>
+174:                     <p class="card-desc">Rèn luyện tư duy thuật toán chuyên sâu, cấu trúc dữ liệu để sẵn sàng cho các kỳ thi học sinh giỏi và lập trình thi đấu.</p>
+175:                     <ul class="course-list">
+176:                         <li><i class="fa-solid fa-code"></i> Lập trình thi đấu (C++)</li>
+177:                         <li><i class="fa-solid fa-medal"></i> Ôn thi 10 Chuyên Tin</li>
+178:                         <li><i class="fa-solid fa-star"></i> Luyện thi Tin học trẻ</li>
+179:                     </ul>
+180:                     <a href="#" class="card-btn">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+181:                 </div>
+182:             </div>
+183:         </div>
+184:     </section>
+185: 
+186:     <section id="videos" class="video-section">
+187:         <div class="container">
+188:             <div class="section-header">
+189:                 <span class="badge" style="background-color: #fee2e2; color: #ef4444;">Học liệu Trực quan</span>
+190:                 <h2 class="section-title">Thư viện Video Bài giảng</h2>
+191:                 <p class="section-subtitle">Ôn tập kiến thức mọi lúc, mọi nơi với các video hướng dẫn chi tiết, trực quan do chính thầy biên soạn trên kênh YouTube.</p>
+192:             </div>
+193: 
+194:             <div class="video-grid">
+195:                 <a href="LINK_YOUTUBE_CUA_BAN" target="_blank" class="video-card">
+196:                     <div class="video-thumbnail">
+197:                         <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=800" alt="Video Lập trình">
+198:                         <div class="play-overlay">
+199:                             <i class="fa-solid fa-play"></i>
+200:                         </div>
+201:                         <span class="video-duration">15:24</span>
+202:                     </div>
+203:                     <div class="video-info">
+204:                         <span class="video-category">Lập trình Game</span>
+205:                         <h3 class="video-title">Hướng dẫn làm game Flappy Bird bằng Scratch chi tiết từ A-Z</h3>
+206:                     </div>
+207:                 </a>
+208: 
+209:                 <a href="LINK_YOUTUBE_CUA_BAN" target="_blank" class="video-card">
+210:                     <div class="video-thumbnail">
+211:                         <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bfce8?auto=format&fit=crop&q=80&w=800" alt="Video Python">
+212:                         <div class="play-overlay">
+213:                             <i class="fa-solid fa-play"></i>
+214:                         </div>
+215:                         <span class="video-duration">22:10</span>
+216:                     </div>
+217:                     <div class="video-info">
+218:                         <span class="video-category">Python Cơ bản</span>
+219:                         <h3 class="video-title">Bài 1: Làm quen với Python và Cấu trúc rẽ nhánh (If/Else)</h3>
+220:                     </div>
+221:                 </a>
+222: 
+223:                 <a href="LINK_YOUTUBE_CUA_BAN" target="_blank" class="video-card">
+224:                     <div class="video-thumbnail">
+225:                         <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=800" alt="Video C++">
+226:                         <div class="play-overlay">
+227:                             <i class="fa-solid fa-play"></i>
+228:                         </div>
+229:                         <span class="video-duration">45:00</span>
+230:                     </div>
+231:                     <div class="video-info">
+232:                         <span class="video-category">Giải Đề Chuyên</span>
+233:                         <h3 class="video-title">Chữa đề thi Học sinh giỏi Tin học - Mảng 1 chiều & Thuật toán tối ưu</h3>
+234:                     </div>
+235:                 </a>
+236:             </div>
+237: 
+238:             <div class="text-center" style="margin-top: 50px; text-align: center;">
+239:                 <a href="LINK_KENH_YOUTUBE_CUA_BAN" target="_blank" class="btn btn-secondary" style="border-color: #ef4444; color: #ef4444;">
+240:                     <i class="fa-brands fa-youtube"></i> Xem toàn bộ trên YouTube
+241:                 </a>
+242:             </div>
+243:         </div>
+244:     </section>
+245: 
+246:     <section id="about" class="about-section">
+247:         <div class="container about-container">
+248:             <div class="about-image-side">
+249:                 <div class="profile-frame">
+250:                     <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600" alt="Thầy Hoàng Văn Tuân" class="profile-img">
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+Created At: 2026-08-01T03:28:19Z
+Completed At: 2026-08-01T03:28:21Z
+The following changes were made by the multi_replace_file_content tool to: c:\Users\admin\Downloads\mywebsite\mywebsite\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -85,8 +85,6 @@
+                 </div>
+ 
+                 <a href="office.html" class="nav-link">Tin học văn phòng</a>
+-                <a href="#videos" class="nav-link">Thư viện video</a>
+-                <a href="#about" class="nav-link">Về thầy</a>
+                 <a href="#contact" class="nav-btn">Liên hệ ngay</a>
+             </nav>
+ 
+@@ -182,123 +182,6 @@
+         </div>
+     </section>
+ 
+-    <section id="videos" class="video-section">
+-        <div class="container">
+-            <div class="section-header">
+-                <span class="badge" style="background-color: #fee2e2; color: #ef4444;">Học liệu Trực quan</span>
+-                <h2 class="section-title">Thư viện Video Bài giảng</h2>
+-                <p class="section-subtitle">Ôn tập kiến thức mọi lúc, mọi nơi với các video hướng dẫn chi tiết, trực quan do chính thầy biên soạn trên kênh YouTube.</p>
+-            </div>
+-
+-            <div class="video-grid">
+-                <a href="LINK_YOUTUBE_CUA_BAN" target="_blank" class="video-card">
+-                    <div class="video-thumbnail">
+-                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=800" alt="Video Lập trình">
+-                        <div class="play-overlay">
+-                            <i class="fa-solid fa-play"></i>
+-                        </div>
+-                        <span class="video-duration">15:24</span>
+-                    </div>
+-                    <div class="video-info">
+-                        <span class="video-category">Lập trình Game</span>
+-                        <h3 class="video-title">Hướng dẫn làm game Flappy Bird bằng Scratch chi tiết từ A-Z</h3>
+-                    </div>
+-                </a>
+-
+-                <a href="LINK_YOUTUBE_CUA_BAN" target="_blank" class="video-card">
+-                    <div class="video-thumbnail">
+-                        <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bfce8?auto=format&fit=crop&q=80&w=800" alt="Video Python">
+-                        <div class="play-overlay">
+-                            <i class="fa-solid fa-play"></i>
+-                        </div>
+-                        <span class="video-duration">22:10</span>
+-                    </div>
+-                    <div class="video-info">
+-                        <span class="video-category">Python Cơ bản</span>
+-                        <h3 class="video-title">Bài 1: Làm quen với Python và Cấu trúc rẽ nhánh (If/Else)</h3>
+-                    </div>
+-                </a>
+-
+-                <a href="LINK_YOUTUBE_CUA_BAN" target="_blank" class="video-card">
+-                    <div class="video-thumbnail">
+-                        <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=800" alt="Video C++">
+-                        <div class="play-overlay">
+-                            <i class="fa-solid fa-play"></i>
+-                        </div>
+-                        <span class="video-duration">45:00</span>
+-                    </div>
+-                    <div class="video-info">
+-                        <span class="video-category">Giải Đề Chuyên</span>
+-                        <h3 class="video-title">Chữa đề thi Học sinh giỏi Tin học - Mảng 1 chiều & Thuật toán tối ưu</h3>
+-                    </div>
+-                </a>
+-            </div>
+-
+-            <div class="text-center" style="margin-top: 50px; text-align: center;">
+-                <a href="LINK_KENH_YOUTUBE_CUA_BAN" target="_blank" class="btn btn-secondary" style="border-color: #ef4444; color: #ef4444;">
+-                    <i class="fa-brands fa-youtube"></i> Xem toàn bộ trên YouTube
+-                </a>
+-            </div>
+-        </div>
+-    </section>
+-
+-    <section id="about" class="about-section">
+-        <div class="container about-container">
+-            <div class="about-image-side">
+-                <div class="profile-frame">
+-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600" alt="Thầy Hoàng Văn Tuân" class="profile-img">
+-                    
+-                    <div class="info-badge badge-top">
+-                        <i class="fa-solid fa-graduation-cap"></i>
+-                        <div>
+-                            <h4>Giảng viên CNTT</h4>
+-                            <p>Bậc Đại học</p>
+-                        </div>
+-                    </div>
+-                    
+-                    <div class="info-badge badge-bottom">
+-                        <i class="fa-solid fa-child"></i>
+-                        <div>
+-                            <h4>Chuyên gia Đào tạo</h4>
+-                            <p>K-12 & Lập trình trẻ</p>
+-                        </div>
+-                    </div>
+-                </div>
+-            </div>
+-
+-            <div class="about-content-side">
+-                <span class="badge" style="background-color: #e0f2fe; color: #0369a1;">Người đồng hành</span>
+-                <h2 class="about-title">Về Thầy Hoàng Văn Tuân</h2>
+-                <p class="about-lead">
+-                    Với đặc quyền được đồng hành cùng sinh viên chuyên ngành phần mềm ở bậc Đại học và các em học sinh từ lớp 1 đến lớp 12, tôi có một cái nhìn toàn diện về lộ trình phát triển năng lực số. Tôi hiểu rõ học sinh cần tích lũy những gì ở từng lứa tuổi để không bị bỡ ngỡ và có thể tiến xa trong kỷ nguyên công nghệ.
+-                </p>
+-                
+-                <div class="philosophy-box">
+-                    <h3 class="philosophy-title"><i class="fa-solid fa-heart"></i> Triết lý Giáo dục</h3>
+-                    <div class="philosophy-items">
+-                        
+-                        <div class="philosophy-item">
+-                            <div class="p-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+-                            <div class="p-text">
+-                                <h4>Học qua dự án thực tế (Project-based Learning)</h4>
+-                                <p>Không nhồi nhét lý thuyết suông một cách khô khan. Lớp học của thầy luôn hướng tới việc giúp các em tự tay hoàn thành các sản phẩm thực tế: một trò chơi Scratch/GameMaker sinh động hay một trang web cá nhân độc đáo.</p>
+-                            </div>
+-                        </div>
+-                        
+-                        <div class="philosophy-item">
+-                            <div class="p-icon"><i class="fa-solid fa-brain"></i></div>
+-                            <div class="p-text">
+-                                <h4>Kiến tạo tư duy bền vững</h4>
+-                                <p>Cú pháp hay công cụ lập trình có thể thay đổi theo thời gian, nhưng tư duy logic, kỹ năng giải quyết vấn đề (Problem-solving) và cấu trúc giải thuật được rèn luyện từ bé sẽ là bệ phóng tư duy đi theo các em suốt đời.</p>
+-                            </div>
+-                        </div>
+-
+-                    </div>
+-                </div>
+-            </div>
+-        </div>
+-    </section>
+-
+     <footer id="contact" class="site-footer">
+         <div class="container footer-container">
+             <div class="footer-column brand-column">
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.Dạ em đã đồng bộ thanh menu (header) cho **tất cả các trang** rồi ạ! 
+
+Hiện tại, toàn bộ các trang khóa học (khi tải lên) sẽ đều dùng chung một bộ menu y hệt như `index.html` (đã xóa Thư viện video, Về thầy, và các liên kết cũ). Hơn nữa, em đã chỉnh lại các đường link cuộn trang (như `#contact` hay `#courses-k12`) thành `index.html#contact` để khi phụ huynh đang ở trang khóa học mà bấm vào thanh menu thì sẽ tự động nhảy thẳng về đúng vị trí đó trên trang chủ một cách mượt mà nhất.
+
+Thầy/bạn nhấn `Ctrl + F5` ở một trang khóa học bất kỳ để kiểm tra sự đồng bộ nhé!

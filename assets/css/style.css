@@ -1,0 +1,1198 @@
+/* ==========================================================================
+   RESET & BIẾN TOÀN CỤC
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Bảng màu chính (Vibe công nghệ, uy tín nhưng hiện đại) */
+    --primary: #1e293b;       /* Xám xanh đậm */
+    --primary-light: #334155; /* Xám xanh vừa */
+    --accent: #2563eb;        /* Xanh dương công nghệ (Màu nhấn) */
+    --accent-hover: #1d4ed8;
+    --text-main: #0f172a;     /* Chữ chính gần như đen */
+    --text-muted: #64748b;    /* Chữ mô tả màu xám */
+    --bg-light: #f8fafc;      /* Nền sáng */
+    --white: #ffffff;
+    
+    /* Font chữ & Hiệu ứng chuyển động */
+    --font-sans: 'Inter', sans-serif;
+    --transition: all 0.3s ease;
+    --radius: 8px;
+    --max-width: 1200px;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color: var(--text-main);
+    background-color: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ==========================================================================
+   1. HEADER & NAVBAR
+   ========================================================================== */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+/* Thêm shadow đậm hơn khi người dùng cuộn chuột xuống */
+.main-header.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 12px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.logo i {
+    color: var(--accent);
+    font-size: 22px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-link {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--primary-light);
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent);
+}
+
+/* Hiệu ứng gạch chân khi hover cho menu tĩnh */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+.nav-btn {
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    font-size: 15px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.nav-btn:hover {
+    background-color: var(--accent-hover);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   2. HERO SECTION
+   ========================================================================== */
+.hero-section {
+    padding-top: 140px; /* Tránh bị che bởi fixed navbar */
+    padding-bottom: 80px;
+    background: radial-gradient(circle at 90% 10%, #eff6ff 0%, #ffffff 60%);
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: var(--accent);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero-title {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.hero-title .highlight {
+    color: var(--accent);
+    position: relative;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 36px;
+    max-width: 540px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: var(--radius);
+    font-size: 16px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.25);
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--primary);
+    border: 2px solid #e2e8f0;
+}
+
+.btn-secondary:hover {
+    background-color: var(--bg-light);
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+}
+
+/* Phần hiển thị hình ảnh và các thẻ nổi k-12 sinh động */
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-illustration {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    position: relative;
+}
+
+.circle-bg {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 200px;
+    height: 200px;
+    background-color: #fca5a5;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.4;
+    filter: blur(40px);
+}
+
+/* Các thẻ bài học nổi xung quanh ảnh tạo nét thân thiện trẻ trung */
+.tech-card {
+    position: absolute;
+    background: var(--white);
+    padding: 10px 18px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 3;
+    animation: float 4s ease-in-out infinite;
+}
+
+.card-1 { top: 20%; left: -30px; color: #306998; animation-delay: 0s; }
+.card-2 { bottom: 15%; left: -20px; color: #e11d48; animation-delay: 1s; }
+.card-3 { top: -10px; right: 20px; color: #f97316; animation-delay: 2s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Tương thích thiết bị di động)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+    }
+    .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-actions {
+        justify-content: center;
+    }
+    .tech-card {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    /* Biến menu thành dạng tràn màn hình khi bấm nút trên điện thoại */
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 40px 24px;
+        gap: 24px;
+        transition: 0.4s ease;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    }
+    
+    .nav-menu.open {
+        left: 0;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    .nav-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    /* Xử lý dropdown trên mobile */
+    .dropdown {
+        width: 100%;
+    }
+    
+    .dropdown-menu {
+        position: static; /* Gỡ bỏ lớp nổi absolute */
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        padding: 0;
+        margin-top: 10px;
+        background-color: #f8fafc; /* Nền hơi xám để phân biệt */
+        display: none; /* Mặc định ẩn trên mobile */
+    }
+
+    /* Trên điện thoại, khi người dùng chạm (active/hover) thì hiện ra */
+    .dropdown:hover .dropdown-menu,
+    .dropdown:active .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-item {
+        padding: 12px 20px 12px 40px; /* Lùi vào trong để thể hiện là menu con */
+    }
+
+    /* Thêm định dạng cho Dropdown bản rộng của Lập trình thi đấu */
+    .dropdown-large {
+        min-width: 340px; /* Tăng độ rộng menu để chứa tên kỳ thi thoải mái */
+    }
+
+    .dropdown-item.item-two-lines {
+        align-items: flex-start; /* Căn icon thẳng hàng với dòng chữ đầu tiên */
+        padding: 12px 24px;
+        padding-left: 40px; /* Thụt lề đồng bộ với các menu con khác trên mobile */
+    }
+
+    .item-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.4;
+    }
+
+    .item-text strong {
+        font-size: 14.5px;
+        color: var(--primary);
+        transition: var(--transition);
+    }
+
+    .dropdown-item:hover .item-text strong {
+        color: var(--accent); /* Đổi màu chữ đậm khi hover */
+    }
+
+    .dropdown-subtext {
+        font-size: 12px;
+        color: var(--text-muted);
+        font-weight: 500;
+        margin-top: 2px;
+    }
+
+    /* Màu sắc chuyên biệt cho từng icon kỳ thi tạo sự sinh động */
+    .text-amber { color: #f59e0b !important; }
+    .text-blue { color: #3b82f6 !important; }
+    .text-purple { color: #a855f7 !important; }
+    .text-indigo { color: #6366f1 !important; }
+    .text-red { color: #ef4444 !important; }
+}
+
+/* ==========================================================================
+   3. COURSES SECTION (LỘ TRÌNH HỌC TẬP)
+   ========================================================================== */
+.courses-section {
+    padding: 100px 0;
+    background-color: var(--bg-light);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Sử dụng CSS Grid để chia 3 cột đều nhau */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Định dạng thẻ Card chung */
+.course-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+    border-top: 5px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.card-target {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.card-desc {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.course-list {
+    list-style: none;
+    margin-bottom: 30px;
+    flex-grow: 1; /* Đẩy nút xuống dưới cùng */
+}
+
+.course-list li {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--primary-light);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.course-list li i {
+    width: 20px;
+    text-align: center;
+}
+
+.card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: var(--transition);
+    align-self: flex-start;
+}
+
+.card-btn:hover {
+    gap: 12px; /* Hiệu ứng mũi tên trượt sang phải khi hover */
+}
+
+/* Các Theme màu sắc khác nhau cho từng nhóm */
+/* Nhóm 1: Sáng tạo (Cấp 1 & 2) */
+.theme-creative {
+    border-top-color: #f59e0b;
+}
+.theme-creative .card-icon {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+.theme-creative .card-target { color: #d97706; }
+.theme-creative .course-list li i { color: #f59e0b; }
+.theme-creative .card-btn { color: #d97706; }
+
+/* Nhóm 2: Phát triển (Cấp 2 & 3) */
+.theme-dev {
+    border-top-color: #3b82f6;
+}
+.theme-dev .card-icon {
+    background-color: #dbeafe;
+    color: #2563eb;
+}
+.theme-dev .card-target { color: #2563eb; }
+.theme-dev .course-list li i { color: #3b82f6; }
+.theme-dev .card-btn { color: #2563eb; }
+
+/* Nhóm 3: Thi đấu chuyên nghiệp */
+.theme-pro {
+    border-top-color: #8b5cf6;
+}
+.theme-pro .card-icon {
+    background-color: #ede9fe;
+    color: #7c3aed;
+}
+.theme-pro .card-target { color: #7c3aed; }
+.theme-pro .course-list li i { color: #8b5cf6; }
+.theme-pro .card-btn { color: #7c3aed; }
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 992px) {
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+}
+
+/* ==========================================================================
+   4. VIDEO SECTION (THƯ VIỆN VIDEO)
+   ========================================================================== */
+.video-section {
+    padding: 100px 0;
+    background-color: var(--white); /* Đổi màu nền trắng để tách biệt với khối lộ trình */
+}
+
+/* CSS Grid cho thư viện video (3 cột) */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+/* Thẻ bọc ngoài Video */
+.video-card {
+    background: var(--bg-light);
+    border-radius: 16px;
+    overflow: hidden;
+    display: block; /* Thẻ a biến thành block để click được toàn bộ */
+    transition: var(--transition);
+    border: 1px solid #e2e8f0;
+}
+
+.video-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+    border-color: #cbd5e1;
+}
+
+/* Vùng chứa ảnh Thumbnail */
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Tỉ lệ chuẩn của video YouTube */
+    overflow: hidden;
+    background-color: var(--primary);
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Hiệu ứng zoom nhẹ ảnh khi đưa chuột vào */
+.video-card:hover .video-thumbnail img {
+    transform: scale(1.05);
+}
+
+/* Lớp phủ mờ và Nút Play ở giữa ảnh */
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.3); /* Phủ đen mờ 30% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.play-overlay i {
+    width: 60px;
+    height: 60px;
+    background-color: #ef4444; /* Màu đỏ đặc trưng của YouTube */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    padding-left: 4px; /* Chỉnh icon play ra giữa một chút */
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+    transition: transform 0.3s ease;
+}
+
+/* Nút play phóng to nhẹ khi hover */
+.video-card:hover .play-overlay i {
+    transform: scale(1.15);
+    background-color: #dc2626;
+}
+
+/* Hiển thị thời lượng video góc dưới bên phải */
+.video-duration {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Vùng thông tin Video (Tiêu đề, phân loại) */
+.video-info {
+    padding: 24px;
+}
+
+.video-category {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.video-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.5;
+    /* Rút gọn tiêu đề nếu quá dài (Tối đa 2 dòng) */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.video-card:hover .video-title {
+    color: var(--accent);
+}
+
+/* Responsive cho phần Video */
+@media (max-width: 992px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+   5. ABOUT SECTION (GIỚI THIỆU & TRIẾT LÝ GIÁO DỤC)
+   ========================================================================== */
+.about-section {
+    padding: 100px 0;
+    background-color: var(--bg-light); /* Màu nền xám nhẹ để phân tách với phần video */
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+/* Định dạng cột chứa ảnh */
+.about-image-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-frame {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    object-fit: cover;
+    aspect-ratio: 4 / 5;
+    z-index: 2;
+    position: relative;
+}
+
+/* Định dạng chung cho 2 thẻ thông tin nổi trên bức ảnh */
+.info-badge {
+    position: absolute;
+    background: var(--white);
+    padding: 14px 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    z-index: 3;
+    white-space: nowrap;
+}
+
+.info-badge i {
+    font-size: 20px;
+    color: var(--accent);
+    background: #eff6ff;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-badge h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 2px;
+}
+
+.info-badge p {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Vị trí của các thẻ nổi */
+.badge-top {
+    top: 12%;
+    left: -50px;
+}
+
+.badge-bottom {
+    bottom: 12%;
+    right: -50px;
+}
+
+/* Định dạng cột nội dung bên phải */
+.about-content-side {
+    flex: 1.2;
+}
+
+.about-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.about-lead {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--primary-light);
+    margin-bottom: 32px;
+}
+
+/* Hộp Triết lý Giáo dục */
+.philosophy-box {
+    background: var(--white);
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+    border-left: 5px solid var(--accent);
+}
+
+.philosophy-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.philosophy-title i {
+    color: #ef4444; /* Màu đỏ ấm áp cho icon trái tim */
+}
+
+.philosophy-items {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.philosophy-item {
+    display: flex;
+    gap: 16px;
+}
+
+.p-icon {
+    font-size: 18px;
+    color: var(--accent);
+    margin-top: 3px;
+}
+
+.p-text h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 6px;
+}
+
+.p-text p {
+    font-size: 14.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Xử lý tương thích hiển thị trên Mobile và Tablet */
+@media (max-width: 992px) {
+    .about-container {
+        flex-direction: column;
+        gap: 60px;
+    }
+    .about-image-side {
+        order: 2; /* Trên điện thoại, phần chữ hiển thị trước rồi mới đến ảnh chân dung bên dưới */
+    }
+    .badge-top { left: -20px; }
+    .badge-bottom { right: -20px; }
+}
+
+@media (max-width: 576px) {
+    .philosophy-box {
+        padding: 24px 16px;
+    }
+    .badge-top, .badge-bottom {
+        position: static;
+        margin: 10px auto;
+        width: fit-content;
+    }
+    .profile-frame {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ==========================================================================
+   6. SITE FOOTER (CHÂN TRANG)
+   ========================================================================== */
+.site-footer {
+    background-color: var(--primary); /* Sử dụng lại biến màu xám xanh đậm #1e293b */
+    color: #94a3b8; /* Màu chữ bạc/xám sáng để dễ đọc trên nền tối */
+    padding-top: 80px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr; /* Chia 3 cột, cột thương hiệu rộng hơn chút */
+    gap: 48px;
+    padding-bottom: 50px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Định dạng cột Logo thương hiệu */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.footer-logo i {
+    color: #38bdf8; /* Xanh cyan sáng hơn để nổi bật trên nền tối */
+}
+
+.footer-brand-desc {
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+/* Các mạng xã hội */
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-links a {
+    width: 38px;
+    height: 38px;
+    background-color: var(--primary-light);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    font-size: 15px;
+}
+
+.social-links a:hover {
+    background-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+/* Tiêu đề các mục lớn ở chân trang */
+.footer-heading {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 24px;
+    position: relative;
+}
+
+/* Menu liên kết ở Footer */
+.footer-links-list, .contact-info-list {
+    list-style: none;
+}
+
+.footer-links-list li {
+    margin-bottom: 12px;
+}
+
+.footer-links-list a {
+    font-size: 14.5px;
+    transition: var(--transition);
+}
+
+.footer-links-list a:hover {
+    color: var(--white);
+    padding-left: 5px; /* Hiệu ứng đẩy nhẹ chữ sang phải khi di chuột vào */
+}
+
+/* Thông tin liên hệ trực tiếp */
+.contact-info-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14.5px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.contact-info-list i {
+    color: #38bdf8;
+    margin-top: 3px;
+    font-size: 16px;
+}
+
+/* Bản quyền chân trang (Bottom Bar) */
+.footer-bottom {
+    border-top: 1px solid var(--primary-light);
+    padding: 24px 0;
+    font-size: 13.5px;
+}
+
+.footer-bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ==========================================================================
+   SCROLL TO TOP BUTTON (NÚT LÊN ĐẦU TRANG)
+   ========================================================================== */
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: -60px; /* Ban đầu ẩn ở ngoài màn hình bên phải */
+    width: 46px;
+    height: 46px;
+    background-color: var(--accent);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hiện nút ra khi có class 'show' */
+.scroll-to-top-btn.show {
+    right: 30px;
+}
+
+.scroll-to-top-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-3px);
+}
+
+/* Responsive cho Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .footer-heading {
+        margin-bottom: 16px;
+    }
+    .footer-bottom-container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   DROPDOWN MENU (MENU THẢ XUỐNG CHO KHÓA HỌC K-12)
+   ========================================================================== */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-icon {
+    font-size: 12px;
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Căn ngay dưới chữ Khóa học K-12 */
+    left: 0;
+    background-color: var(--white);
+    min-width: 260px; /* Độ rộng của menu thả xuống */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 12px 0;
+    
+    /* Thiết lập ẩn menu mặc định */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px); /* Đẩy xuống 1 chút để tạo hiệu ứng trượt lên */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+}
+
+/* Hiệu ứng khi Hover: Hiện menu và Xoay mũi tên */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Trượt về vị trí gốc */
+}
+
+.dropdown:hover .dropdown-icon {
+    transform: rotate(180deg); /* Xoay mũi tên ngược lên */
+    color: var(--accent);
+}
+
+/* Định dạng nội dung bên trong Dropdown */
+.dropdown-group {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.dropdown-group:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.dropdown-group h4 {
+    padding: 8px 24px;
+    font-size: 12.5px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 24px;
+    color: var(--primary);
+    font-size: 15px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.dropdown-item i {
+    color: var(--accent);
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+.dropdown-item:hover {
+    background-color: #f8fafc;
+    color: var(--accent);
+    padding-left: 30px; /* Thụt lề nhẹ tạo cảm giác bấm mượt mà */
+}

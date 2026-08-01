@@ -1,0 +1,93 @@
+
+/* CSS DÀNH CHO FRAMEWORK CORPORATE / VĂN PHÒNG */
+:root {
+    --step-primary: #1e3a8a;
+    --step-primary-dark: #1e40af;
+    --step-secondary: #3b82f6;
+    --step-dark: #0f172a;
+    --step-text: #475569;
+    --step-bg: #f8fafc;
+    --step-white: #ffffff;
+}
+
+body { font-family: 'Georgia', serif; background-color: var(--step-bg); color: var(--step-text); margin: 0; padding: 0; }
+h1, h2, h3, h4, .btn-cta, .btn-outline, .price-btn { font-family: 'Inter', sans-serif; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.text-center { text-align: center; }
+.section-title { font-size: 34px; font-weight: 700; color: var(--step-primary); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+.section-subtitle { font-size: 18px; color: var(--step-text); max-width: 700px; margin: 0 auto 50px auto; line-height: 1.8; }
+
+.btn-cta { display: inline-block; padding: 15px 35px; font-size: 18px; font-weight: 600; text-transform: uppercase; border-radius: 4px; text-decoration: none; background: var(--step-primary); color: white; border: none; transition: background 0.3s; }
+.btn-cta:hover { background: var(--step-secondary); color: white; }
+
+/* Bước 1: Hero Section */
+.hero-step { padding: 100px 0; background: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070') center/cover; position: relative; text-align: center; }
+.hero-step::before { content: ''; position: absolute; inset: 0; background: rgba(255,255,255,0.9); }
+.hero-step .container { position: relative; z-index: 2; }
+.hero-badge { display: inline-block; padding: 5px 15px; background: var(--step-primary); color: white; font-weight: 500; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+.hero-step h1 { font-size: 48px; font-weight: 800; color: var(--step-dark); margin-bottom: 20px; }
+.hero-step h1 span { color: var(--step-secondary); }
+.hero-step p { font-size: 20px; color: var(--step-text); max-width: 800px; margin: 0 auto 40px auto; line-height: 1.8; }
+.hero-actions { display: flex; justify-content: center; gap: 15px; }
+.btn-outline { display: inline-block; padding: 15px 35px; font-size: 18px; font-weight: 600; text-transform: uppercase; border-radius: 4px; text-decoration: none; border: 2px solid var(--step-primary); color: var(--step-primary); transition: all 0.3s; }
+
+/* Bước 2: Phân loại đối tượng */
+.target-step { padding: 80px 0; background: white; border-top: 5px solid var(--step-secondary); }
+.target-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #e2e8f0; border: 1px solid #e2e8f0; }
+.target-card { background: white; padding: 50px 30px; text-align: center; }
+.target-icon { font-size: 40px; color: var(--step-secondary); margin-bottom: 20px; }
+.target-card h3 { font-size: 20px; color: var(--step-dark); margin-bottom: 15px; }
+
+/* Bước 3: Vì sao chọn chúng tôi */
+.reasons-step { padding: 80px 0; background: var(--step-bg); }
+.reasons-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.reason-card { border-top: 3px solid var(--step-primary); background: white; padding: 40px 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.reason-icon { font-size: 30px; color: var(--step-primary); margin-bottom: 20px; }
+.reason-card h3 { font-size: 20px; color: var(--step-dark); margin-bottom: 15px; }
+.reason-card p { line-height: 1.8; }
+
+/* Bước 4: Lộ trình 4 bước */
+.roadmap-step { padding: 80px 0; background: white; }
+.timeline-container { display: flex; border: 1px solid #e2e8f0; margin-top: 40px; }
+.timeline-step { flex: 1; padding: 40px 30px; text-align: center; border-right: 1px solid #e2e8f0; }
+.timeline-step:last-child { border-right: none; }
+.timeline-number { font-size: 60px; font-weight: 900; color: #f1f5f9; line-height: 1; margin-bottom: -20px; }
+.timeline-step h3 { font-size: 18px; color: var(--step-primary); margin-bottom: 10px; position: relative; z-index: 2; }
+
+/* Bước 5: Bằng chứng uy tín */
+.proof-step { padding: 80px 0; background: var(--step-bg); }
+.proof-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+.portfolio-gallery { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.port-img { position: relative; border: 1px solid #e2e8f0; background: white; padding: 10px; }
+.port-img img { width: 100%; display: block; }
+.port-label { text-align: center; padding-top: 10px; font-family: 'Inter', sans-serif; font-size: 14px; color: var(--step-primary); font-weight: 600; }
+.reviews-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.review-card { background: white; padding: 30px; border-left: 4px solid var(--step-secondary); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.review-card p { font-style: italic; line-height: 1.8; }
+.review-card .author { font-family: 'Inter', sans-serif; font-weight: 600; color: var(--step-dark); }
+
+/* Bước 6: Bảng giá & Cam kết */
+.pricing-step { padding: 80px 0; background: white; border-top: 1px solid #e2e8f0; }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-bottom: 60px; border: 1px solid #e2e8f0; }
+.price-card { padding: 50px 30px; text-align: center; border-right: 1px solid #e2e8f0; }
+.price-card:last-child { border-right: none; }
+.price-card.popular { background: #f8fafc; border-top: 4px solid var(--step-primary); margin-top: -4px; }
+.popular-badge { color: var(--step-primary); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; display: block; }
+.price-card h3 { font-size: 20px; color: var(--step-dark); margin-bottom: 15px; }
+.price-card .price { font-size: 40px; font-weight: 700; color: var(--step-primary); margin-bottom: 20px; }
+.price-list { list-style: none; padding: 0; margin: 0 0 30px 0; text-align: left; }
+.price-list li { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px dashed #e2e8f0; }
+.price-btn { display: block; padding: 15px; border: 1px solid var(--step-primary); color: var(--step-primary); text-decoration: none; font-weight: 600; text-transform: uppercase; }
+.price-card.popular .price-btn { background: var(--step-primary); color: white; }
+
+.golden-guarantee { background: #eff6ff; padding: 40px; text-align: center; border-left: 5px solid var(--step-secondary); max-width: 800px; margin: 0 auto; }
+.golden-guarantee h2 { font-size: 24px; color: var(--step-primary); margin-bottom: 10px; }
+.golden-guarantee p { font-size: 18px; margin: 0; }
+
+@media (max-width: 1024px) {
+    .target-grid, .pricing-grid, .timeline-container { display: flex; flex-direction: column; }
+    .price-card { border-right: none; border-bottom: 1px solid #e2e8f0; }
+}
+@media (max-width: 768px) {
+    .reasons-grid, .proof-grid, .reviews-grid { grid-template-columns: 1fr; }
+}

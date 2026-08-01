@@ -1,0 +1,25 @@
+/* --- MÀU SẮC VÀ EMOJI --- */
+:root { --c1: #f97316; --c2: #fdba74; --bg: #fff7ed; --text: #7c2d12; }
+
+.floating-emoji { position: absolute; font-size: 30px; animation: floatUp 20s linear infinite; opacity: 0.5; }
+.floating-emoji:nth-child(1) { left: 11.436209890587401%; top: 48.06239640209389%; animation-delay: 1.8609388010688437s; content: "🔋"; }
+.floating-emoji:nth-child(2) { left: 24.816078648817463%; top: 8.623418507721093%; animation-delay: 2.1517063857644847s; content: "🧠"; }
+.floating-emoji:nth-child(3) { left: 27.749517038114234%; top: 0.027887287857775167%; animation-delay: 4.616727632199727s; content: "💾"; }
+.floating-emoji:nth-child(4) { left: 25.065313046025484%; top: 54.45494344391949%; animation-delay: 1.6037181609271467s; content: "🔋"; }
+.floating-emoji:nth-child(5) { left: 21.339543987185984%; top: 54.62748298494125%; animation-delay: 4.790508319272523s; content: "⚙️"; }
+.floating-emoji:nth-child(6) { left: 11.817608056219953%; top: 40.05518273248985%; animation-delay: 2.2348124036787205s; content: "🔌"; }
+.floating-emoji:nth-child(7) { left: 46.28317124703053%; top: 58.041002262264726%; animation-delay: 0.5391067114009979s; content: "🔌"; }
+.floating-emoji:nth-child(8) { left: 92.62103335427365%; top: 13.70535275998842%; animation-delay: 4.350571075249524s; content: "🧠"; }
+.floating-emoji:nth-child(9) { left: 65.09031603744889%; top: 99.78784716785646%; animation-delay: 4.752441445657487s; content: "💾"; }
+.floating-emoji:nth-child(10) { left: 55.17007596062522%; top: 99.69504649994238%; animation-delay: 2.7337473490079587s; content: "🔋"; }
+
+/* --- GIAO DIỆN RIÊNG BIỆT --- */
+.layout-cs .step-wrap { background: white; padding: 80px 40px; border: 3px solid #7c2d12; border-radius: 0; margin-bottom: 20px; box-shadow: 8px 8px 0px rgba(124, 45, 18, 0.1); }
+.layout-cs .hero-wrap { text-align: center; background: white; border: 12px solid var(--c1); padding: 120px 40px; margin: 40px 20px; }
+.layout-cs .grid-wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; }
+.layout-cs .item-card { flex: 1 1 300px; background: var(--bg); border: 2px solid var(--c1); padding: 40px; position: relative; }
+.layout-cs .item-card::after { content: ''; position: absolute; top: -15px; right: -15px; width: 40px; height: 40px; background: var(--c2); z-index: -1; }
+.layout-cs .timeline { display: flex; flex-direction: column; gap: 25px; }
+.layout-cs .timeline-item { display: flex; align-items: center; justify-content: space-between; border: 2px solid #fdba74; padding: 25px; background: white; }
+.layout-cs .timeline-item::after { content: '➔'; color: var(--c1); font-size: 28px; font-weight: bold; }
+.layout-cs .faq-item { border: 2px solid var(--c1); padding: 25px; margin-bottom: 15px; background: #fffaf5; }

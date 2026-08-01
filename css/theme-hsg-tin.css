@@ -1,0 +1,24 @@
+/* --- MÀU SẮC VÀ EMOJI --- */
+:root { --c1: #8b5cf6; --c2: #ddd6fe; --bg: #f5f3ff; --text: #4c1d95; }
+
+.floating-emoji { position: absolute; font-size: 30px; animation: floatUp 20s linear infinite; opacity: 0.5; }
+.floating-emoji:nth-child(1) { left: 39.47529887988346%; top: 42.94138495692318%; animation-delay: 2.4440052866934625s; content: "🏅"; }
+.floating-emoji:nth-child(2) { left: 24.019935484700415%; top: 39.81622615912038%; animation-delay: 1.8380016240860337s; content: "🌌"; }
+.floating-emoji:nth-child(3) { left: 40.77017583981725%; top: 49.24845823037213%; animation-delay: 3.0909952708872055s; content: "🏅"; }
+.floating-emoji:nth-child(4) { left: 68.49586641401568%; top: 92.0783854653879%; animation-delay: 4.8659054882890675s; content: "♾️"; }
+.floating-emoji:nth-child(5) { left: 31.90491454101878%; top: 69.37782159447774%; animation-delay: 3.2218702248384608s; content: "🌌"; }
+.floating-emoji:nth-child(6) { left: 88.01653295083969%; top: 7.4644284388110105%; animation-delay: 1.0932318998691037s; content: "🏅"; }
+.floating-emoji:nth-child(7) { left: 1.3226064770840096%; top: 62.6106360176085%; animation-delay: 2.5111205217749992s; content: "🌌"; }
+.floating-emoji:nth-child(8) { left: 4.908652353414311%; top: 39.76220488465908%; animation-delay: 3.6583953026731155s; content: "🌌"; }
+.floating-emoji:nth-child(9) { left: 29.8405632987648%; top: 38.537075773525366%; animation-delay: 3.5874334569850665s; content: "🏅"; }
+.floating-emoji:nth-child(10) { left: 15.424739176634583%; top: 18.488663407581196%; animation-delay: 0.8496201868579834s; content: "🏅"; }
+
+/* --- GIAO DIỆN RIÊNG BIỆT --- */
+.layout-hsg-tin .step-wrap { padding: 90px 20px; background: transparent; }
+.layout-hsg-tin .hero-wrap { text-align: center; background: radial-gradient(circle at center, #4c1d95 0%, var(--c1) 100%); color: white; padding: 140px 20px; border-bottom: 15px solid var(--c2); }
+.layout-hsg-tin .grid-wrap { display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; }
+.layout-hsg-tin .item-card { width: 320px; height: 320px; background: white; border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 40px; border: 8px solid var(--c1); box-shadow: 0 15px 30px rgba(139, 92, 246, 0.25); transition: 0.5s; }
+.layout-hsg-tin .item-card:hover { transform: rotate(10deg) scale(1.05); }
+.layout-hsg-tin .timeline { display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap; }
+.layout-hsg-tin .timeline-item { flex: 1 1 220px; padding: 25px; background: var(--c1); color: white; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+.layout-hsg-tin .faq-item { background: white; padding: 25px; border-radius: 40px; border: 3px solid var(--c2); margin-bottom: 20px; text-align: center; }

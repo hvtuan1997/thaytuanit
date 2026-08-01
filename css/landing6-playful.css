@@ -1,0 +1,101 @@
+
+/* CSS DÀNH CHO FRAMEWORK 6 BƯỚC (LANDING PAGE) */
+:root {
+    --step-primary: #ff7e5f;
+    --step-primary-dark: #eb5e3d;
+    --step-secondary: #feb47b;
+    --step-dark: #1e293b;
+    --step-text: #475569;
+    --step-bg: #f8fafc;
+    --step-white: #ffffff;
+}
+
+body { font-family: 'Inter', sans-serif; background-color: var(--step-bg); color: var(--step-text); margin: 0; padding: 0; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.text-center { text-align: center; }
+.section-title { font-size: 38px; font-weight: 900; color: var(--step-dark); margin-bottom: 15px; }
+.section-subtitle { font-size: 18px; color: var(--step-text); max-width: 700px; margin: 0 auto 50px auto; line-height: 1.6; }
+
+/* Nút CTA Rung lắc */
+.btn-cta { display: inline-block; padding: 18px 40px; font-size: 20px; font-weight: 800; text-transform: uppercase; border-radius: 50px; text-decoration: none; transition: all 0.3s; box-shadow: 0 10px 25px rgba(255, 126, 95, 0.4); background: linear-gradient(135deg, var(--step-primary) 0%, var(--step-secondary) 100%); color: white; cursor: pointer; border: none; animation: pulse 2s infinite; }
+.btn-cta:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 15px 30px rgba(255, 126, 95, 0.6); color: white; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 126, 95, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(255, 126, 95, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 126, 95, 0); } }
+
+/* Bước 1: Hero Section */
+.hero-step { padding: 120px 0 100px 0; background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022') center/cover; position: relative; text-align: center; }
+.hero-badge { display: inline-block; padding: 8px 20px; background: #e0f2fe; color: #0284c7; font-weight: 700; border-radius: 30px; margin-bottom: 25px; font-size: 16px; }
+.hero-step h1 { font-size: 56px; font-weight: 900; color: var(--step-dark); margin-bottom: 20px; line-height: 1.2; letter-spacing: -1px; }
+.hero-step h1 span { background: -webkit-linear-gradient(135deg, var(--step-primary), #eab308); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-step p { font-size: 22px; color: var(--step-text); max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6; }
+.hero-actions { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.btn-outline { display: inline-block; padding: 18px 40px; font-size: 20px; font-weight: 700; text-transform: uppercase; border-radius: 50px; text-decoration: none; border: 2px solid var(--step-primary); color: var(--step-primary); background: white; transition: all 0.3s; }
+.btn-outline:hover { background: var(--step-bg); transform: translateY(-3px); }
+
+/* Bước 2: Phân loại đối tượng */
+.target-step { padding: 80px 0; background: var(--step-white); }
+.target-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.target-card { background: var(--step-bg); padding: 40px 30px; border-radius: 20px; text-align: center; border: 2px dashed #cbd5e1; transition: all 0.3s; }
+.target-card:hover { border-color: var(--step-primary); transform: translateY(-10px); background: #fffaf5; }
+.target-icon { font-size: 50px; color: var(--step-primary); margin-bottom: 20px; }
+.target-card h3 { font-size: 22px; color: var(--step-dark); margin-bottom: 15px; font-weight: 800; }
+.target-card p { font-size: 16px; color: var(--step-text); }
+
+/* Bước 3: Vì sao chọn chúng tôi */
+.reasons-step { padding: 90px 0; background: #fff5f3; }
+.reasons-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.reason-card { background: var(--step-white); padding: 50px 30px; border-radius: 24px; box-shadow: 0 15px 40px rgba(0,0,0,0.04); position: relative; overflow: hidden; }
+.reason-icon { width: 80px; height: 80px; background: linear-gradient(135deg, var(--step-primary) 0%, var(--step-secondary) 100%); color: white; display: flex; align-items: center; justify-content: center; font-size: 32px; border-radius: 20px; margin-bottom: 30px; box-shadow: 0 10px 20px rgba(255, 126, 95, 0.3); }
+.reason-card h3 { font-size: 24px; font-weight: 800; color: var(--step-dark); margin-bottom: 15px; }
+.reason-card p { font-size: 17px; line-height: 1.7; color: var(--step-text); }
+
+/* Bước 4: Lộ trình 4 bước */
+.roadmap-step { padding: 100px 0; background: var(--step-white); }
+.timeline-container { display: flex; justify-content: space-between; align-items: flex-start; position: relative; margin-top: 60px; }
+.timeline-container::before { content: ''; position: absolute; top: 40px; left: 50px; right: 50px; height: 4px; background: #e2e8f0; z-index: 1; }
+.timeline-step { flex: 1; text-align: center; position: relative; z-index: 2; padding: 0 15px; }
+.timeline-number { width: 80px; height: 80px; background: var(--step-white); border: 4px solid var(--step-primary); color: var(--step-primary); font-size: 28px; font-weight: 900; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin: 0 auto 20px auto; box-shadow: 0 0 0 10px var(--step-white); }
+.timeline-step:hover .timeline-number { background: var(--step-primary); color: white; transition: all 0.3s; }
+.timeline-step h3 { font-size: 20px; font-weight: 800; color: var(--step-dark); margin-bottom: 10px; }
+.timeline-step p { font-size: 15px; color: var(--step-text); }
+
+/* Bước 5: Bằng chứng uy tín */
+.proof-step { padding: 90px 0; background: var(--step-bg); }
+.proof-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+.portfolio-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.port-img { border-radius: 15px; overflow: hidden; position: relative; aspect-ratio: 16/9; }
+.port-img img { width: 100%; height: 100%; object-fit: cover; }
+.port-label { position: absolute; bottom: 10px; left: 10px; background: rgba(0,0,0,0.7); color: white; padding: 5px 15px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+.reviews-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; align-content: start; }
+.review-card { background: white; padding: 30px; border-radius: 15px; border-left: 5px solid #f59e0b; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
+.review-card .stars { color: #f59e0b; margin-bottom: 10px; }
+.review-card p { font-size: 15px; font-style: italic; margin-bottom: 20px; }
+.review-card .author { font-weight: 700; color: var(--step-dark); }
+
+/* Bước 6: Bảng giá & Cam kết */
+.pricing-step { padding: 100px 0; background: var(--step-white); }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 60px; }
+.price-card { background: var(--step-bg); padding: 50px 30px; border-radius: 24px; text-align: center; border: 2px solid transparent; transition: all 0.3s; }
+.price-card.popular { border-color: var(--step-primary); background: white; box-shadow: 0 20px 50px rgba(255, 126, 95, 0.15); transform: translateY(-15px); position: relative; }
+.popular-badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--step-primary); color: white; font-weight: 800; padding: 8px 25px; border-radius: 30px; font-size: 14px; text-transform: uppercase; }
+.price-card h3 { font-size: 24px; color: var(--step-dark); font-weight: 800; margin-bottom: 15px; }
+.price-card .price { font-size: 48px; font-weight: 900; color: var(--step-primary); margin-bottom: 20px; }
+.price-card .price span { font-size: 18px; color: var(--step-text); font-weight: 400; }
+.price-list { list-style: none; padding: 0; margin: 0 0 35px 0; text-align: left; }
+.price-list li { margin-bottom: 15px; font-size: 16px; color: var(--step-text); display: flex; align-items: center; gap: 10px; }
+.price-list li i { color: #10b981; }
+.price-btn { display: block; width: 100%; padding: 15px; background: white; border: 2px solid var(--step-primary); color: var(--step-primary); font-weight: 800; border-radius: 12px; text-decoration: none; font-size: 18px; transition: all 0.3s; }
+.price-card.popular .price-btn { background: var(--step-primary); color: white; }
+.price-btn:hover { background: var(--step-primary); color: white; }
+
+.golden-guarantee { background: linear-gradient(135deg, #fef08a 0%, #fde047 100%); padding: 40px; border-radius: 20px; text-align: center; border: 2px dashed #ca8a04; max-width: 900px; margin: 0 auto; box-shadow: 0 15px 30px rgba(253, 224, 71, 0.3); }
+.golden-guarantee h2 { font-size: 32px; color: #854d0e; font-weight: 900; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; gap: 15px; }
+.golden-guarantee p { font-size: 20px; color: #a16207; font-weight: 600; margin: 0; }
+
+@media (max-width: 1024px) {
+    .target-grid, .reasons-grid, .proof-grid, .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+    .target-grid, .reasons-grid, .proof-grid, .pricing-grid, .portfolio-gallery, .reviews-grid { grid-template-columns: 1fr; }
+    .timeline-container { flex-direction: column; align-items: center; gap: 40px; }
+    .timeline-container::before { display: none; }
+}

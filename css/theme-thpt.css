@@ -1,0 +1,71 @@
+/* --- MÀU SẮC VÀ EMOJI --- */
+:root {
+    --c1: #2563eb;
+    --c2: #ef4444;
+    --bg: #f7fbff;
+    --text: #111827;
+    --course-accent: #10b981;
+    --course-surface: #ffffff;
+    --course-line: rgba(15, 23, 42, 0.12);
+}
+
+.floating-emoji { position: absolute; font-size: 30px; animation: floatUp 20s linear infinite; opacity: 0.5; }
+.floating-emoji:nth-child(1) { left: 69.19732570017668%; top: 63.5124172722028%; animation-delay: 0.5554688343816244s; content: "🧩"; }
+.floating-emoji:nth-child(2) { left: 38.47761124126252%; top: 34.213670455720546%; animation-delay: 1.5805163373700548s; content: "🌟"; }
+.floating-emoji:nth-child(3) { left: 90.39839926662765%; top: 56.74103032220844%; animation-delay: 3.3415364409725266s; content: "🧩"; }
+.floating-emoji:nth-child(4) { left: 49.58541810911321%; top: 45.633513034341576%; animation-delay: 0.20816207057822167s; content: "🧩"; }
+.floating-emoji:nth-child(5) { left: 5.011349828509659%; top: 7.568972177334665%; animation-delay: 4.364961238536524s; content: "🚀"; }
+.floating-emoji:nth-child(6) { left: 80.9324160590121%; top: 98.68710055371133%; animation-delay: 3.5090044144218786s; content: "🚀"; }
+.floating-emoji:nth-child(7) { left: 3.57738434999072%; top: 3.588068739770589%; animation-delay: 3.254389554721663s; content: "🎮"; }
+.floating-emoji:nth-child(8) { left: 46.64971723967341%; top: 78.15859946547931%; animation-delay: 1.5795397377709204s; content: "🌟"; }
+.floating-emoji:nth-child(9) { left: 51.486184265171595%; top: 61.10731217243672%; animation-delay: 2.9060742524668184s; content: "👾"; }
+.floating-emoji:nth-child(10) { left: 23.69162081059478%; top: 60.750773436484614%; animation-delay: 4.7890033248502935s; content: "🌟"; }
+
+/* --- GIAO DIỆN RIÊNG BIỆT --- */
+
+body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); overflow-x: hidden; }
+.reveal { opacity: 0; transform: translateY(50px); transition: all 0.8s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+.bg-decorations { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 1; overflow: hidden; opacity: 0.1; }
+.floating-emoji { position: absolute; font-size: 30px; animation: floatUp 20s linear infinite; opacity: 0.5; }
+.floating-emoji:nth-child(1) { left: 0.2501746486554324%; top: 92.19450490580844%; animation-delay: 0.7797949279117433s; content: "📋"; }
+.floating-emoji:nth-child(2) { left: 24.51814341182027%; top: 93.02120475356361%; animation-delay: 4.88208959127162s; content: "📋"; }
+.floating-emoji:nth-child(3) { left: 36.41528233361638%; top: 85.79299948966215%; animation-delay: 2.4021291648864023s; content: "💼"; }
+.floating-emoji:nth-child(4) { left: 37.26303434479933%; top: 26.625393312422908%; animation-delay: 3.1191513058626708s; content: "📝"; }
+.floating-emoji:nth-child(5) { left: 4.98420967173574%; top: 58.181020846701216%; animation-delay: 2.172726371917682s; content: "💼"; }
+.floating-emoji:nth-child(6) { left: 20.392164627329368%; top: 53.28438466210126%; animation-delay: 1.4283478015362105s; content: "📈"; }
+.floating-emoji:nth-child(7) { left: 45.37643537450489%; top: 18.74388677174177%; animation-delay: 1.78951323103061s; content: "📝"; }
+.floating-emoji:nth-child(8) { left: 0.8372910254277222%; top: 15.645609450270193%; animation-delay: 3.128915750662516s; content: "📈"; }
+.floating-emoji:nth-child(9) { left: 25.721031712110854%; top: 47.425691749694046%; animation-delay: 2.9840157191974264s; content: "📋"; }
+.floating-emoji:nth-child(10) { left: 99.4043898688486%; top: 55.922038024225614%; animation-delay: 1.127318909634532s; content: "📋"; }
+
+/* V10 Styles */
+.classflow-wrap { position: relative; max-width: 800px; margin: 0 auto; padding-left: 40px; border-left: 6px solid var(--c2); }
+.classflow-item { position: relative; margin-bottom: 40px; background: white; padding: 25px 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 2px solid #eee; }
+.classflow-item::before { content: ''; position: absolute; left: -55px; top: 20px; width: 24px; height: 24px; background: var(--c1); border-radius: 50%; border: 4px solid white; box-shadow: 0 0 0 4px var(--c2); }
+.classflow-time { display: inline-block; background: var(--c1); color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; margin-bottom: 10px; }
+
+.maker-wrap { display: flex; justify-content: space-between; position: relative; margin: 40px 0; }
+.maker-wrap::after { content: ''; position: absolute; top: 40px; left: 0; right: 0; height: 4px; background: var(--c2); z-index: 1; }
+.maker-step { position: relative; z-index: 2; width: 22%; text-align: center; background: white; padding: 30px 15px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-top: 6px solid var(--c1); }
+.maker-number { width: 60px; height: 60px; background: var(--c1); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: bold; margin: -60px auto 20px auto; border: 5px solid white; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
+
+.skills-wrap { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); max-width: 800px; margin: 0 auto; border: 3px dashed var(--c2); }
+.skill-item { margin-bottom: 25px; }
+.skill-header { display: flex; justify-content: space-between; font-weight: bold; font-size: 18px; margin-bottom: 10px; color: var(--c1); }
+.skill-bar-bg { width: 100%; height: 16px; background: var(--bg); border-radius: 10px; overflow: hidden; }
+.skill-bar-fill { height: 100%; background: linear-gradient(90deg, var(--c2), var(--c1)); border-radius: 10px; width: 0; transition: width 2s ease-out; }
+
+.env-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.env-card { text-align: center; background: white; padding: 40px; border-radius: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-bottom: 8px solid var(--c1); }
+.env-card i { font-size: 50px; color: var(--c2); margin-bottom: 20px; }
+
+
+
+.layout-thpt .step-wrap { background: white; margin: 60px 20px; padding: 70px 50px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+
+.grid-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
+.bento { grid-template-columns: repeat(3, 1fr); }
+.item-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s; }
+.item-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+@media (max-width: 768px) { .bento { grid-template-columns: 1fr; } }

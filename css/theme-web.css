@@ -1,0 +1,25 @@
+/* --- MÀU SẮC VÀ EMOJI --- */
+:root { --c1: #d946ef; --c2: #fbcfe8; --bg: #fdf4ff; --text: #701a75; }
+
+.floating-emoji { position: absolute; font-size: 30px; animation: floatUp 20s linear infinite; opacity: 0.5; }
+.floating-emoji:nth-child(1) { left: 97.32359713487094%; top: 16.658597493529335%; animation-delay: 0.33833191455765244s; content: "🎨"; }
+.floating-emoji:nth-child(2) { left: 59.85111730579921%; top: 81.15570861144461%; animation-delay: 2.9484198988904864s; content: "🌈"; }
+.floating-emoji:nth-child(3) { left: 94.39629303319177%; top: 71.34136992450102%; animation-delay: 4.7212914907049885s; content: "📱"; }
+.floating-emoji:nth-child(4) { left: 21.040244303452194%; top: 90.86714766476416%; animation-delay: 1.9438116224033837s; content: "🎨"; }
+.floating-emoji:nth-child(5) { left: 96.53206737850564%; top: 21.399223026318104%; animation-delay: 0.04471407181895093s; content: "✨"; }
+.floating-emoji:nth-child(6) { left: 6.868129795209099%; top: 6.175082258861886%; animation-delay: 0.017689538037083397s; content: "✨"; }
+.floating-emoji:nth-child(7) { left: 56.76320645379596%; top: 57.699781096978484%; animation-delay: 0.1172518844275483s; content: "🌐"; }
+.floating-emoji:nth-child(8) { left: 36.2452518907582%; top: 18.42137801861281%; animation-delay: 0.7313164103894471s; content: "✨"; }
+.floating-emoji:nth-child(9) { left: 86.85728977256632%; top: 78.97699334018343%; animation-delay: 0.4051971454065689s; content: "✨"; }
+.floating-emoji:nth-child(10) { left: 57.64871767249655%; top: 1.1524904054380336%; animation-delay: 3.3937014561368133s; content: "🌐"; }
+
+/* --- GIAO DIỆN RIÊNG BIỆT --- */
+.layout-web { background: #fdf4ff; }
+.layout-web .step-wrap { margin: 50px 20px; padding: 70px 50px; background: white; border-radius: 30px; box-shadow: 0 20px 60px rgba(217, 70, 239, 0.15); border: 2px solid #fbcfe8; }
+.layout-web .hero-wrap { text-align: center; padding: 160px 20px; background: linear-gradient(45deg, #701a75, var(--c1)); border-radius: 0 0 150px 0; color: white; position: relative; }
+.layout-web .hero-wrap::after { content: '✨'; position: absolute; font-size: 80px; opacity: 0.3; top: 60px; right: 80px; animation: spin 8s linear infinite; }
+.layout-web .grid-wrap { columns: 2 320px; column-gap: 40px; }
+.layout-web .item-card { break-inside: avoid; background: linear-gradient(to bottom right, #ffffff, #fdf4ff); padding: 35px; margin-bottom: 40px; border-radius: 15px; border-top: 6px solid var(--c1); box-shadow: 0 10px 25px rgba(217, 70, 239, 0.1); }
+.layout-web .timeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.layout-web .timeline-item { background: linear-gradient(135deg, var(--c1), #fca5f1); color: white; padding: 30px; border-radius: 30px 0 30px 0; text-align: center; box-shadow: 0 10px 20px rgba(217, 70, 239, 0.3); }
+.layout-web .faq-item { background: #fdf4ff; padding: 25px; border-radius: 15px; margin-bottom: 20px; border: 2px dashed var(--c1); }

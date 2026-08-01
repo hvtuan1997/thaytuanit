@@ -1,0 +1,198 @@
+/* ==========================================================================
+   COURSE DETAIL STYLES (TÁCH FILE CHO TRANG CON)
+   ========================================================================== */
+
+/* Course Header Section */
+.course-hero {
+    padding: 160px 0 80px;
+    background: linear-gradient(135deg, var(--bg-light) 0%, #e0f2fe 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.course-hero-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.course-hero-content {
+    flex: 1;
+}
+
+.course-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--accent);
+}
+
+.course-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.course-short-desc {
+    font-size: 18px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.course-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--primary-light);
+}
+
+.meta-item i {
+    color: var(--accent);
+}
+
+/* Course Content Section */
+.course-detail-section {
+    padding: 80px 0;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.course-main-content h2 {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.course-main-content h2:first-child {
+    margin-top: 0;
+}
+
+.course-main-content p {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Syllabus */
+.syllabus-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.syllabus-item {
+    background: var(--white);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    transition: var(--transition);
+}
+
+.syllabus-item:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-color: var(--accent);
+}
+
+.syllabus-item h3 {
+    font-size: 18px;
+    color: var(--primary);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.syllabus-item h3 i {
+    color: var(--accent);
+}
+
+/* Sidebar */
+.course-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.enroll-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.price {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.enroll-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: var(--accent);
+    color: var(--white);
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.enroll-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.feature-list {
+    text-align: left;
+    list-style: none;
+}
+
+.feature-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 15px;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature-list li i {
+    color: #10b981;
+}
+
+@media (max-width: 992px) {
+    .course-hero-container {
+        flex-direction: column;
+    }
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+    .course-sidebar {
+        position: static;
+    }
+}

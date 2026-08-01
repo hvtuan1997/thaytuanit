@@ -1,0 +1,371 @@
+/* ==========================================================================
+   DISTINCT COURSE ART DIRECTION
+   Bright, large, and intentionally different per course page.
+   ========================================================================== */
+
+main[class^="layout-"] {
+    --special-ink: #111827;
+    --special-soft-shadow: 0 22px 46px rgba(15, 23, 42, 0.11);
+}
+
+
+main[class^="layout-"] .hero-wrap {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+main[class^="layout-"] .hero-wrap .container {
+    z-index: 3;
+}
+
+main[class^="layout-"] .hero-wrap::before,
+main[class^="layout-"] .hero-wrap::after {
+    display: none !important;
+}
+
+main[class^="layout-"] .grid-wrap,
+main[class^="layout-"] .env-wrap,
+main[class^="layout-"] .products-wrap,
+main[class^="layout-"] .reviews-wrap {
+    align-items: stretch;
+}
+
+/* Scratch: playful block stage */
+.layout-scratch .hero-wrap {
+    background:
+        linear-gradient(90deg, rgba(14, 165, 233, 0.12) 50%, transparent 50%) 0 0 / 84px 84px,
+        linear-gradient(rgba(16, 185, 129, 0.12) 50%, transparent 50%) 0 0 / 84px 84px,
+        linear-gradient(135deg, #ffffff, #ecfeff 45%, #fff7ed) !important;
+}
+
+.layout-scratch .hero-wrap::after {
+    content: "";
+    position: absolute;
+    right: -72px;
+    bottom: -72px;
+    width: 260px;
+    height: 220px;
+    border: 5px solid #0ea5e9;
+    border-radius: 28px;
+    background:
+        linear-gradient(#ffffff 0 0) 44px 42px / 170px 24px no-repeat,
+        linear-gradient(#f97316 0 0) 44px 86px / 130px 24px no-repeat,
+        linear-gradient(#22c55e 0 0) 44px 130px / 155px 24px no-repeat,
+        #e0f7ff;
+    box-shadow: 18px 18px 0 #fed7aa;
+    opacity: 0.18;
+}
+
+.layout-scratch .item-card {
+    border-radius: 28px 28px 28px 8px !important;
+    border-width: 3px !important;
+}
+
+.layout-scratch .item-card:nth-child(odd) {
+    transform: rotate(-1.2deg) !important;
+}
+
+.layout-scratch .item-card:nth-child(even) {
+    transform: rotate(1.2deg) !important;
+}
+
+/* GameMaker: bright arcade level select */
+.layout-gamemaker .hero-wrap {
+    background:
+        linear-gradient(90deg, rgba(239, 68, 68, 0.1) 1px, transparent 1px),
+        linear-gradient(rgba(245, 158, 11, 0.12) 1px, transparent 1px),
+        linear-gradient(135deg, #ffffff, #fff7ed 55%, #fef3c7) !important;
+    background-size: 38px 38px, 38px 38px, auto !important;
+}
+
+.layout-gamemaker .hero-wrap::after {
+    content: "LEVEL 01";
+    position: absolute;
+    right: clamp(20px, 8vw, 120px);
+    bottom: 74px;
+    padding: 28px 34px;
+    border: 5px solid #ef4444;
+    border-radius: 22px;
+    background: #ffffff;
+    color: #ef4444;
+    font-size: 34px;
+    font-weight: 900;
+    box-shadow: 16px 16px 0 #fde68a;
+}
+
+.layout-gamemaker .item-card,
+.layout-gamemaker .product-card {
+    border-radius: 20px !important;
+    border-left: 12px solid #ef4444 !important;
+}
+
+.layout-gamemaker .item-card h3::before,
+.layout-gamemaker .product-info h4::before {
+    content: "▶ ";
+    color: #f59e0b;
+}
+
+/* Python: light code notebook */
+.layout-python .hero-wrap {
+    background:
+        radial-gradient(circle at 16% 24%, #dbeafe 0 230px, transparent 231px),
+        linear-gradient(135deg, #ffffff, #eff6ff 52%, #fef9c3) !important;
+}
+
+.layout-python .hero-wrap::after {
+    content: "for future in skills:\A    practice()\A    build()";
+    white-space: pre;
+    position: absolute;
+    right: clamp(20px, 7vw, 110px);
+    bottom: 70px;
+    width: 330px;
+    padding: 30px;
+    border: 4px solid #2563eb;
+    border-radius: 18px;
+    background: #ffffff;
+    color: #1e3a8a;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.65;
+    box-shadow: 18px 18px 0 #fef08a;
+}
+
+.layout-python .item-card,
+.layout-python .classflow-item {
+    border-radius: 6px !important;
+    border-left: 10px solid #2563eb !important;
+    font-family: Inter, sans-serif;
+}
+
+.layout-python .item-card h3,
+.layout-python .classflow-item h3 {
+    font-family: Consolas, "Courier New", monospace;
+}
+
+/* Web: browser canvas */
+.layout-web .hero-wrap {
+    background:
+        linear-gradient(135deg, #ffffff 0%, #ecfeff 50%, #fff7ed 100%) !important;
+}
+
+.layout-web .hero-wrap::after {
+    content: "";
+    position: absolute;
+    right: clamp(18px, 6vw, 100px);
+    bottom: 62px;
+    width: 360px;
+    height: 245px;
+    border: 4px solid #06b6d4;
+    border-radius: 18px;
+    background:
+        radial-gradient(circle, #06b6d4 0 5px, transparent 6px) 22px 18px / 22px 22px no-repeat,
+        linear-gradient(#cffafe 0 0) 0 48px / 100% 3px no-repeat,
+        linear-gradient(90deg, #06b6d4 0 36%, #f97316 36% 66%, #7c3aed 66%) 32px 84px / 296px 42px no-repeat,
+        linear-gradient(#e0f2fe 0 0) 32px 152px / 132px 52px no-repeat,
+        linear-gradient(#fed7aa 0 0) 196px 152px / 132px 52px no-repeat,
+        #ffffff;
+    box-shadow: 18px 18px 0 #cffafe;
+}
+
+.layout-web .item-card,
+.layout-web .product-card {
+    border-radius: 18px !important;
+    position: relative;
+}
+
+.layout-web .item-card h3::after,
+.layout-web .product-info h4::after {
+    content: " .html";
+    color: #f97316;
+    font-size: 18px;
+}
+
+/* Computer Science: concept map */
+.layout-cs .hero-wrap {
+    background:
+        radial-gradient(circle at 22% 30%, #e2e8f0 0 230px, transparent 231px),
+        radial-gradient(circle at 78% 22%, #dcfce7 0 250px, transparent 251px),
+        linear-gradient(135deg, #ffffff, #f8fafc) !important;
+}
+
+.layout-cs .hero-wrap::after {
+    content: "";
+    position: absolute;
+    right: clamp(24px, 8vw, 130px);
+    bottom: 70px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle, #0ea5e9 0 13px, transparent 14px) 48px 50px / 100px 100px no-repeat,
+        radial-gradient(circle, #22c55e 0 13px, transparent 14px) 178px 48px / 100px 100px no-repeat,
+        radial-gradient(circle, #64748b 0 13px, transparent 14px) 116px 172px / 100px 100px no-repeat,
+        linear-gradient(35deg, transparent 48%, #94a3b8 49% 51%, transparent 52%),
+        linear-gradient(145deg, transparent 48%, #94a3b8 49% 51%, transparent 52%),
+        #ffffff;
+    border: 4px solid #64748b;
+    box-shadow: 16px 16px 0 #e2e8f0;
+}
+
+/* THPT: study notebook */
+.layout-thpt .hero-wrap {
+    background:
+        linear-gradient(#dbeafe 2px, transparent 2px) 0 0 / 100% 44px,
+        linear-gradient(90deg, transparent 72px, #fecaca 73px, transparent 74px),
+        #ffffff !important;
+}
+
+.layout-thpt .hero-wrap::after {
+    content: "12\A11\A10";
+    white-space: pre;
+    position: absolute;
+    right: clamp(26px, 9vw, 140px);
+    bottom: 70px;
+    width: 180px;
+    height: 250px;
+    border: 4px solid #2563eb;
+    border-radius: 16px;
+    background: #eff6ff;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 46px;
+    font-weight: 900;
+    line-height: 1.45;
+    box-shadow: 16px 16px 0 #ffe4e6;
+}
+
+.layout-thpt .item-card,
+.layout-thpt .classflow-item {
+    background:
+        linear-gradient(#e2e8f0 1px, transparent 1px) 0 0 / 100% 34px,
+        #ffffff !important;
+}
+
+/* Competition pages: ranking and medal boards */
+.layout-tin-hoc-tre-a .hero-wrap,
+.layout-tin-hoc-tre-b .hero-wrap,
+.layout-hsg-tin .hero-wrap,
+.layout-chuyen-tin-10 .hero-wrap,
+.layout-hkico .hero-wrap {
+    background:
+        radial-gradient(circle at 12% 24%, rgba(255,255,255,.9) 0 170px, transparent 171px),
+        linear-gradient(135deg, #ffffff, var(--bg)) !important;
+}
+
+.layout-tin-hoc-tre-a .hero-wrap::after,
+.layout-tin-hoc-tre-b .hero-wrap::after,
+.layout-hsg-tin .hero-wrap::after,
+.layout-chuyen-tin-10 .hero-wrap::after,
+.layout-hkico .hero-wrap::after {
+    content: "TOP\A01";
+    white-space: pre;
+    position: absolute;
+    right: clamp(22px, 8vw, 130px);
+    bottom: 72px;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    border: 8px solid var(--c2);
+    background: #ffffff;
+    color: var(--c1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.02;
+    box-shadow: 18px 18px 0 color-mix(in srgb, var(--c1) 18%, white);
+}
+
+.layout-tin-hoc-tre-a .item-card,
+.layout-tin-hoc-tre-b .item-card,
+.layout-hsg-tin .item-card,
+.layout-chuyen-tin-10 .item-card,
+.layout-hkico .item-card {
+    border-radius: 20px !important;
+    border-left: 14px solid var(--c1) !important;
+}
+
+.layout-tin-hoc-tre-a .item-card h3::before,
+.layout-tin-hoc-tre-b .item-card h3::before,
+.layout-hsg-tin .item-card h3::before,
+.layout-chuyen-tin-10 .item-card h3::before,
+.layout-hkico .item-card h3::before {
+    content: "# ";
+    color: var(--c2);
+}
+
+@media (max-width: 980px) {
+    main[class^="layout-"] .hero-wrap::after {
+        display: none !important;
+    }
+
+    main[class^="layout-"] .hero-wrap h1 {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+    main[class^="layout-"] .hero-wrap h1 {
+        font-size: 46px !important;
+    }
+
+    main[class^="layout-"] .hero-wrap h2 {
+        font-size: 29px !important;
+    }
+
+    main[class^="layout-"] .item-card,
+    main[class^="layout-"] .classflow-item,
+    main[class^="layout-"] .product-card,
+    main[class^="layout-"] .maker-step,
+    main[class^="layout-"] .env-card,
+    main[class^="layout-"] .review-card {
+        padding: 30px !important;
+    }
+}
+
+/* Typography pass: Times New Roman + smaller content copy. */
+body:has(main[class^="layout-"]),
+body:has(main[class^="layout-"]) *,
+.office-page,
+.office-page * {
+    font-family: "Inter", "Segoe UI", Roboto, Arial, Helvetica, sans-serif !important;
+}
+
+main[class^="layout-"] .hero-wrap p {
+    font-size: clamp(15px, 1.8vw, 21px) !important;
+}
+
+main[class^="layout-"] .item-card p,
+main[class^="layout-"] .product-info p,
+main[class^="layout-"] .review-text,
+main[class^="layout-"] .env-card p,
+main[class^="layout-"] .maker-step p,
+main[class^="layout-"] .classflow-item p {
+    font-size: 14px !important;
+    line-height: 1.68 !important;
+}
+
+.office-page .office-lead {
+    font-size: 17px !important;
+}
+
+.office-page .section-heading p,
+.office-page .register-panel p,
+.office-page .cert-copy p {
+    font-size: 15px !important;
+}
+
+.office-page .office-card p {
+    font-size: 14px !important;
+}
+
+.office-page .module-card li,
+.office-page .strip-grid span,
+.office-page .lesson-row span,
+.office-page .cert-box div {
+    font-size: 13px !important;
+}
